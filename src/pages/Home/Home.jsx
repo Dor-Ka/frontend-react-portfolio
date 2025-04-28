@@ -1,17 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { HeroContainer, HeroText, Button } from './Home.styles';
+import { HeroContainer, HeroTitle, HeroSubtitle, HeroButton } from './Home.styles';
 
 function Home() {
   return (
     <HeroContainer>
-      <HeroText>
-        <h1>Hi, I'm Dorota Karpinska</h1>
-        <p>I'm a passionate Frontend Developer creating sleek and functional web experiences.</p>
-      </HeroText>
-      <Link to="/projects">
-        <Button>See my projects</Button>
-      </Link>
+      <HeroTitle>Welcome to My Portfolio</HeroTitle>
+      <HeroSubtitle>Frontend Developer | React Enthusiast</HeroSubtitle>
+      <HeroButton to="/projects">View My Projects</HeroButton>
     </HeroContainer>
   );
 }

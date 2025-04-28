@@ -1,44 +1,39 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeroContainer = styled.section`
+  flex: 1; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #333;
+  padding: 4rem 2rem;
   color: white;
-  padding: 0 2rem;
-`;
-
-export const HeroContent = styled.div`
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 `;
 
-export const HeroText = styled.div`
+export const HeroTitle = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+`;
+
+export const HeroSubtitle = styled.h2`
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
+  font-weight: normal;
 `;
 
-export const Button = styled.button`
+export const HeroButton = styled(Link)`
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
   background: #e38327;
-  color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 
   &:hover {
-    background: #e56e22;
+    background: #ff9c3e;
   }
 `;

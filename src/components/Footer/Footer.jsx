@@ -12,7 +12,7 @@ function Footer() {
                     <FaLinkedin />
                 </SocialLink>
                 <SocialLink href="mailto:dorotakarpinska.dev@gmail.com">
-                <FaEnvelope />
+                    <FaEnvelope />
                 </SocialLink>
             </SocialLinks>
 

@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav style={styles.nav}>
       <h1 style={styles.logo}>DK Portfolio</h1>
       <ul style={styles.navLinks}>
-        <li><Link to="/" style={styles.link}>Home</Link></li>
-        <li><Link to="/about" style={styles.link}>About</Link></li>
-        <li><Link to="/projects" style={styles.link}>Projects</Link></li>
-        <li><Link to="/contact" style={styles.link}>Contact</Link></li>
+        <li><NavLink to="/" style={({ isActive }) => isActive ? styles.activeLink : styles.link}>Home</NavLink></li>
+        <li><NavLink to="/about" style={({ isActive }) => isActive ? styles.activeLink : styles.link}>About</NavLink></li>
+        <li><NavLink to="/projects" style={({ isActive }) => isActive ? styles.activeLink : styles.link}>Projects</NavLink></li>
+        <li><NavLink to="/contact" style={({ isActive }) => isActive ? styles.activeLink : styles.link}>Contact</NavLink></li>
       </ul>
     </nav>
   );
@@ -35,6 +35,10 @@ const styles = {
     },
     link: {
       color: "#e38327",
+      textDecoration: "none",
+    },
+    activeLink: {
+      color: "#fff",
       textDecoration: "none",
     },
   };

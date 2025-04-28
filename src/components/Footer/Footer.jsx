@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FooterContainer, SocialLinks, SocialLink, CopyRight } from "./Footer.styles";
 
 function Footer() {
@@ -12,7 +12,7 @@ function Footer() {
                     <FaLinkedin />
                 </SocialLink>
                 <SocialLink href="mailto:dorotakarpinska.dev@gmail.com">
-                    📧
+                <FaEnvelope />
                 </SocialLink>
             </SocialLinks>
 

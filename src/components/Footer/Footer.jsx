@@ -1,10 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FooterContainer, SocialLinks, SocialLink } from "./Footer.styles";
+import { FooterContainer, SocialLinks, SocialLink, CopyRight } from "./Footer.styles";
 
 function Footer() {
     return (
       <FooterContainer>
-        <p>&copy; 2025 DK Portfolio</p>
         <SocialLinks>
           <SocialLink href="https://github.com/Dor-Ka" target="_blank">
             <FaGithub />
@@ -13,7 +12,8 @@ function Footer() {
             <FaLinkedin />
           </SocialLink>
         </SocialLinks>
-      </FooterContainer>
+        <CopyRight>&copy; 2025 DK Portfolio</CopyRight>
+        </FooterContainer>
     );
   }
   

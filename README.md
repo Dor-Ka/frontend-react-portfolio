@@ -1,6 +1,7 @@
 # React Portfolio
 
-This is my personal portfolio website built with **React**. It showcases my projects, skills, and contact information, using React Router for multi-page navigation.
+This is my personal portfolio website built with **React**. 
+It showcases my projects, skills, and contact information, using **React Router** for multi-page navigation and custom theme with dark and light mode support.
 
 ## 🌐 Live Demo
 
@@ -8,25 +9,34 @@ This is my personal portfolio website built with **React**. It showcases my proj
 
 ## 📁 Features
 
-- 💡 Clean and simple design
-- 🔀 Multi-page navigation using React Router
+- 🧼 Clean and simple design
+- 🔀 Multi-page navigation using **React Router**
+- 💡 **Dark mode** and **Light mode** support
 - 📱 Fully responsive layout
 - 💼 Project showcase section
 - 📬 Contact page
+- ⚙️ Theme-based color system for consistency
+- 🎨 Color scheme customizable via theme
 
 ## 🛠️ Built With
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- Plain CSS (can be replaced with Tailwind/SCSS later)
+- [Styled Components](https://styled-components.com/) for styling
 - Git & GitHub Pages for deployment
 
 ## 📦 Folder Structure
 
 src/
-├── components/      # Navbar and other reusable components
+├── components/      # Navbar, Footer, and other reusable components
+│   ├── Navbar
+│   ├── Footer
 ├── pages/           # Page components (Home, About, Projects, Contact)
-└── App.jsx          # Main app with routing setup
+├── styles/          # Global styles and theme setup
+│   ├── GlobalStyles.js
+│   ├── theme.js     # Theme configuration (light and dark mode)
+├── App.jsx          # Main app with routing setup
+└── index.js         # Entry point for the app
 
 ## 📸 Screenshots
 

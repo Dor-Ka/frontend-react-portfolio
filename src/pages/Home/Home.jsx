@@ -1,6 +1,21 @@
 import profileImage from '../../assets/profile.jpeg';
 
-import { WelcomeWrapper, WelcomeTitle, WelcomeName, WelcomeSubtitle, HeroContainer, HeroImage, HeroContent, HeroTitle, HeroSubtitle, HeroTechnologies, TechnologyBadge, LinkRow, StyledLink } from "././Home.styles";
+import {
+  DotSeparator,
+  WelcomeWrapper,
+  WelcomeTitle,
+  WelcomeName,
+  WelcomeSubtitle,
+  HeroContainer,
+  HeroImage,
+  HeroContent,
+  HeroTitle,
+  HeroSubtitle,
+  HeroTechnologies,
+  TechnologyBadge,
+  LinkRow,
+  StyledLink
+} from "././Home.styles";
 
 const Home = () => {
   return (
@@ -23,12 +38,17 @@ const Home = () => {
             <TechnologyBadge>HTML</TechnologyBadge>
           </HeroTechnologies>
         </HeroContent>
-        <LinkRow>
+      </HeroContainer>
+      <DotSeparator>
+        <span></span>
+        <span></span>
+        <span></span>
+      </DotSeparator>
+      <LinkRow>
         <StyledLink to="/about">About Me</StyledLink>
         <StyledLink to="/projects">My Projects</StyledLink>
         <StyledLink to="/contact">Contact Info</StyledLink>
       </LinkRow>
-      </HeroContainer>
     </div>
   );
 };

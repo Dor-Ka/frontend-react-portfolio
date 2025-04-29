@@ -1,5 +1,37 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+
+export const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+`;
+
+export const DotSeparator = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+
+  & > span {
+    width: 8px;
+    height: 8px;
+    background-color: ${({ theme }) => theme.primary};
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  & > span:nth-child(2) {
+    animation: ${pulse} 1.5s infinite ease-in-out;
+  }
+`;
 
 
 export const WelcomeWrapper = styled.div`
@@ -38,10 +70,6 @@ export const HeroContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: ${({ theme }) => theme.text};
   margin-bottom: 2rem;
   flex-wrap: wrap;

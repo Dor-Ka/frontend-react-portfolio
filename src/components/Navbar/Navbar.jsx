@@ -1,6 +1,6 @@
 import { Nav, Logo, NavLinks, StyledNavLink } from "./Navbar.styles";
 
-function Navbar() {
+function Navbar({ toggleTheme, isDarkMode }) {
   return (
     <Nav>
       <Logo>DK Portfolio</Logo>
@@ -26,6 +26,9 @@ function Navbar() {
           </StyledNavLink>
         </li>
       </NavLinks>
+      <button onClick={toggleTheme}>
+        {isDarkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+      </button>
     </Nav>
   );
 }

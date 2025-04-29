@@ -1,4 +1,4 @@
-import { Nav, Logo, NavLinks, StyledNavLink } from "./Navbar.styles";
+import { Nav, Logo, NavLinks, StyledNavLink, ThemeToggleButton } from "./Navbar.styles";
 
 function Navbar({ toggleTheme, isDarkMode }) {
   return (
@@ -26,9 +26,9 @@ function Navbar({ toggleTheme, isDarkMode }) {
           </StyledNavLink>
         </li>
       </NavLinks>
-      <button onClick={toggleTheme}>
-        {isDarkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-      </button>
+        <ThemeToggleButton onClick={toggleTheme}>
+          {isDarkMode ? '☀️' : '🌙'}
+        </ThemeToggleButton>
     </Nav>
   );
 }

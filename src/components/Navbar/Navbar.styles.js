@@ -36,3 +36,27 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: underline;
   }
 `;
+
+export const ThemeToggleButton = styled.button`
+  background-color: ${({ theme }) => theme.toggleBackground}; // kolor z theme
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.text}; // kolor ikony
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: ${({ theme }) => theme.toggleHover};
+  }
+
+  &:focus {
+    outline: none;
+  }
+`;

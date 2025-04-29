@@ -9,6 +9,8 @@ export const lightTheme = {
     footerBg: "#ddd",
     footerText: "#444",
     footerHover: "#444",
+    toggleBackground: '#ccc',
+    toggleHover: '#bbb',
   };
   
   export const darkTheme = {
@@ -22,5 +24,7 @@ export const lightTheme = {
     footerBg: "#333",
     footerText: "#aaa",
     footerHover: "#fff",
+    toggleBackground: '#555',
+    toggleHover: '#666',
   };
   

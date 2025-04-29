@@ -11,6 +11,7 @@ export const lightTheme = {
     footerHover: "#444",
     toggleBackground: '#ccc',
     toggleHover: '#bbb',
+    lightbulbOff: '#333',
   };
   
   export const darkTheme = {
@@ -26,5 +27,6 @@ export const lightTheme = {
     footerHover: "#fff",
     toggleBackground: '#555',
     toggleHover: '#666',
+    lightbulbOn: '#e38327'
   };
   

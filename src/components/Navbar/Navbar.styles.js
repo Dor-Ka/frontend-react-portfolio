@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { FaLightbulb } from 'react-icons/fa';
+
 
 export const Nav = styled.nav`
   display: flex;
@@ -38,7 +40,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const ThemeToggleButton = styled.button`
-  background-color: ${({ theme }) => theme.toggleBackground}; // kolor z theme
+  background-color: ${({ theme }) => theme.toggleBackground};
   border: none;
   border-radius: 50%;
   width: 2.5rem;
@@ -48,7 +50,7 @@ export const ThemeToggleButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.text}; // kolor ikony
+  color: ${({ theme }) => theme.text};
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
@@ -59,4 +61,10 @@ export const ThemeToggleButton = styled.button`
   &:focus {
     outline: none;
   }
+`;
+
+export const StyledLightbulb = styled(FaLightbulb)`
+  font-size: 1.6rem;
+  color: ${({ theme, isDarkMode }) => isDarkMode ? theme.lightbulbOn : theme.lightbulbOff};
+  transition: color 0.3s ease;
 `;

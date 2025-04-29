@@ -35,7 +35,8 @@ export const StyledNavLink = styled(NavLink)`
 
   &.active {
   color: ${({ theme }) => theme.navHover};
-    text-decoration: underline;
+  text-decoration-line: underline;
+  text-underline-offset: 8px;
   }
 `;
 

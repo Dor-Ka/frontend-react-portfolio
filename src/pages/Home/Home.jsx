@@ -1,13 +1,36 @@
-import { HeroContainer, HeroTitle, HeroSubtitle, HeroButton } from './Home.styles';
+import profileImage from '../../assets/profile.jpeg';
 
-function Home() {
+import { WelcomeWrapper, WelcomeTitle, WelcomeName, WelcomeSubtitle, HeroContainer, HeroImage, HeroContent, HeroTitle, HeroSubtitle, HeroTechnologies, TechnologyBadge, LinkRow, StyledLink } from "././Home.styles";
+
+const Home = () => {
   return (
-    <HeroContainer>
-      <HeroTitle>Welcome to My Portfolio</HeroTitle>
-      <HeroSubtitle>Frontend Developer | React Enthusiast</HeroSubtitle>
-      <HeroButton to="/projects">View My Projects</HeroButton>
-    </HeroContainer>
+    <div>
+      <WelcomeWrapper>
+        <WelcomeTitle>Hello, I'm</WelcomeTitle>
+        <WelcomeName>Dorota Karpinska</WelcomeName>
+        <WelcomeSubtitle>Explore My Portfolio</WelcomeSubtitle>
+      </WelcomeWrapper>
+      <HeroContainer>
+        <HeroImage src={profileImage} alt="Profile Picture" />
+
+        <HeroContent>
+          <HeroTitle>Frontend Developer & Creative Coder</HeroTitle>
+          <HeroSubtitle>Building beautiful and functional web apps.</HeroSubtitle>
+          <HeroTechnologies>
+            <TechnologyBadge>React</TechnologyBadge>
+            <TechnologyBadge>JavaScript</TechnologyBadge>
+            <TechnologyBadge>CSS</TechnologyBadge>
+            <TechnologyBadge>HTML</TechnologyBadge>
+          </HeroTechnologies>
+        </HeroContent>
+        <LinkRow>
+        <StyledLink to="/about">About Me</StyledLink>
+        <StyledLink to="/projects">My Projects</StyledLink>
+        <StyledLink to="/contact">Contact Info</StyledLink>
+      </LinkRow>
+      </HeroContainer>
+    </div>
   );
-}
+};
 
 export default Home;

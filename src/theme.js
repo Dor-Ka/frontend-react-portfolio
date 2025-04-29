@@ -3,10 +3,12 @@ export const lightTheme = {
     text: "#222",
     primary: "#e38327",
     secondary: "#333",
-    navBg: "#fff",
+    navBg: "#ddd",
     navText: "#e38327",
     navHover: "#000",
     footerBg: "#ddd",
+    footerText: "#444",
+    footerHover: "#444",
   };
   
   export const darkTheme = {
@@ -17,6 +19,8 @@ export const lightTheme = {
     navBg: "#333",
     navText: "#e38327",
     navHover: "#fff",
-    footerBg: "#222",
+    footerBg: "#333",
+    footerText: "#aaa",
+    footerHover: "#fff",
   };
   

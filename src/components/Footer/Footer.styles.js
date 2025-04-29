@@ -5,8 +5,7 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  background: #333;
-  color: white;
+  background: ${({ theme }) => theme.footerBg};
 `;
 
 export const SocialLinks = styled.div`
@@ -17,18 +16,18 @@ export const SocialLinks = styled.div`
 `;
 
 export const SocialLink = styled.a`
-  color: #e38327;
+  color: ${({ theme }) => theme.primary};
   text-decoration: none;
   transition: transform 0.3s, color 0.3s;
 
   &:hover {
-    color: #fff;
+  color: ${({ theme }) => theme.footerHover};
     transform: scale(1.2);
   }
 `;
 
 export const CopyRight = styled.p`
   font-size: 0.9rem;
-  color: #aaa;
+  color: ${({ theme }) => theme.footerText};
   margin: 0;
 `;

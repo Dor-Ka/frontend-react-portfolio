@@ -6,11 +6,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #333;
+  background: ${({ theme }) => theme.navBg};;
 `;
 
 export const Logo = styled.h1`
-  color: #e38327;
+  color: ${({ theme }) => theme.primary};
   margin: 0;
 `;
 
@@ -23,16 +23,16 @@ export const NavLinks = styled.ul`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  color: #e38327;
+  color: ${({ theme }) => theme.primary};
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #fff;
+  color: ${({ theme }) => theme.navHover};
   }
 
   &.active {
-    color: #fff;
+  color: ${({ theme }) => theme.navHover};
     text-decoration: underline;
   }
 `;

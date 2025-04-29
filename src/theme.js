@@ -1,32 +1,32 @@
 export const lightTheme = {
-    background: "#f4f4f4",
-    text: "#222",
+    background: "#eaeaea",
+    text: "#333",
     primary: "#e38327",
     secondary: "#333",
     navBg: "#ddd",
     navText: "#e38327",
-    navHover: "#000",
+    navHover: "#444",
     footerBg: "#ddd",
     footerText: "#444",
     footerHover: "#444",
     toggleBackground: '#ccc',
     toggleHover: '#bbb',
-    lightbulbOff: '#333',
+    lightbulbOff: '#444',
   };
   
   export const darkTheme = {
     background: "#444",
-    text: "#fff",
+    text: "#eaeaea",
     primary: "#e38327",
     secondary: "#222",
     navBg: "#333",
     navText: "#e38327",
-    navHover: "#fff",
+    navHover: "#eaeaea",
     footerBg: "#333",
     footerText: "#aaa",
-    footerHover: "#fff",
+    footerHover: "#eaeaea",
     toggleBackground: '#555',
     toggleHover: '#666',
-    lightbulbOn: '#e38327'
+    lightbulbOn: '#eaeaea'
   };
   

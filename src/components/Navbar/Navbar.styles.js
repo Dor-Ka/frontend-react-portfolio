@@ -30,11 +30,12 @@ export const StyledNavLink = styled(NavLink)`
   transition: color 0.3s ease;
 
   &:hover {
-  color: ${({ theme }) => theme.navHover};
+  text-decoration-line: underline;
+  text-underline-offset: 8px;
   }
 
   &.active {
-  color: ${({ theme }) => theme.navHover};
+  color: ${({ theme }) => theme.navActive};
   text-decoration-line: underline;
   text-underline-offset: 8px;
   }

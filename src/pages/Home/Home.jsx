@@ -1,5 +1,3 @@
-import profileImage from '../../assets/profile.jpeg';
-
 import {
   DotSeparator,
   WelcomeWrapper,
@@ -16,6 +14,7 @@ import {
   LinkRow,
   StyledLink
 } from "././Home.styles";
+import profileImage from '../../assets/profile.jpeg';
 
 const Home = () => {
   return (
@@ -27,7 +26,6 @@ const Home = () => {
       </WelcomeWrapper>
       <HeroContainer>
         <HeroImage src={profileImage} alt="Profile Picture" />
-
         <HeroContent>
           <HeroTitle>Frontend Developer & Creative Coder</HeroTitle>
           <HeroSubtitle>Building beautiful and functional web apps.</HeroSubtitle>

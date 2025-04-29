@@ -8,7 +8,7 @@ export const HeroContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
-  color: white;
+  color: ${({ theme }) => theme.text};
   text-align: center;
 `;
 
@@ -26,14 +26,14 @@ export const HeroSubtitle = styled.h2`
 export const HeroButton = styled(Link)`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  color: #fff;
-  background: #e38327;
+  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.primary};
   border: none;
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.3s ease;
 
   &:hover {
-    background: #ff9c3e;
+  background: ${({ theme }) => theme.navBg};
   }
 `;

@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components";
-import { Link } from "react-router-dom";
+import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const pulse = keyframes`
+const pulse = keyframes`
   0%, 100% {
     transform: scale(1);
     opacity: 0.8;
@@ -17,7 +17,7 @@ export const DotSeparator = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin: 1.5rem 0;
+  // margin: 1.5rem 0;
 
   & > span {
     width: 8px;
@@ -26,62 +26,61 @@ export const DotSeparator = styled.div`
     border-radius: 50%;
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
 
-  & > span:nth-child(2) {
-    animation: ${pulse} 1.5s infinite ease-in-out;
+    &:nth-child(2) {
+      animation: ${pulse} 1.5s infinite ease-in-out;
+    }
   }
 `;
-
 
 export const WelcomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+  margin: 1rem;
+  text-align: center;
 `;
 
 export const WelcomeTitle = styled.h1`
-  text-align: center;
   font-size: 1.75rem;
   color: ${({ theme }) => theme.text};
-  margin: 0 0 0.1rem 0; 
+  margin-bottom: 0.1rem;
 `;
 
 export const WelcomeName = styled.h1`
-  text-align: center;
   font-size: 2.75rem;
   font-weight: bold;
   color: ${({ theme }) => theme.primary};
-  margin: 0 0 0.1rem 0;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
 `;
 
 export const WelcomeSubtitle = styled.h2`
-  text-align: center;
-  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   font-weight: normal;
   color: ${({ theme }) => theme.text};
-  margin: 0; 
+  margin: 0 auto;
+  margin-top: 1rem;
 `;
-
 
 export const HeroContainer = styled.section`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   color: ${({ theme }) => theme.text};
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
 `;
 
 export const HeroImage = styled.img`
   border-radius: 50%;
-  max-width: 180px;
-  max-height: 180px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 `;
 
 export const HeroContent = styled.div`
@@ -104,9 +103,9 @@ export const HeroSubtitle = styled.h3`
 
 export const HeroTechnologies = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-  flex-wrap: wrap;
 `;
 
 export const TechnologyBadge = styled.span`
@@ -117,6 +116,7 @@ export const TechnologyBadge = styled.span`
   font-size: 1rem;
   color: ${({ theme }) => theme.text};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, border 0.3s;
 
   &:hover {
     background: ${({ theme }) => theme.navBg};
@@ -139,13 +139,13 @@ export const StyledLink = styled(Link)`
   border: none;
   border-radius: 20px;
   text-decoration: none;
-  transition: background 0.3s ease, border 0.3s ease, transform 0.1s ease;
+  transition: background 0.3s, border 0.3s, transform 0.1s;
 
   &:hover {
     background: ${({ theme }) => theme.navBg};
     border: 1px solid ${({ theme }) => theme.primary};
   }
-  
+
   &:active {
     border: 2px solid ${({ theme }) => theme.primary};
     transform: scale(1.05);

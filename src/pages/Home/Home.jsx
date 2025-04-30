@@ -2,7 +2,6 @@ import profileImage from '../../assets/profile.jpeg';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 
 import {
-  DotSeparator,
   WelcomeWrapper,
   WelcomeTitle,
   WelcomeName,
@@ -38,13 +37,6 @@ const Home = () => {
           </HeroContent>
         </WelcomeWrapper>
       </HeroContainer>
-
-      <DotSeparator>
-        <span></span>
-        <span></span>
-        <span></span>
-      </DotSeparator>
-
       <WelcomeSubtitle>
         <FaAngleDoubleDown />
         Explore My Portfolio

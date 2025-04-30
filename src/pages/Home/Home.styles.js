@@ -1,36 +1,12 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaAngleDoubleDown } from 'react-icons/fa';
 
-const pulse = keyframes`
+const moveUpDown = keyframes`
   0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.3);
-    opacity: 1;
-  }
-`;
-
-export const DotSeparator = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  // margin: 1.5rem 0;
-
-  & > span {
-    width: 8px;
-    height: 8px;
-    background-color: ${({ theme }) => theme.primary};
-    border-radius: 50%;
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-    &:nth-child(2) {
-      animation: ${pulse} 1.5s infinite ease-in-out;
-    }
+    transform: translateY(-5px);
   }
 `;
 
@@ -54,15 +30,6 @@ export const WelcomeName = styled.h1`
   color: ${({ theme }) => theme.primary};
   margin-top: 0;
   margin-bottom: 0.1rem;
-`;
-
-const moveUpDown = keyframes`
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
 `;
 
 export const WelcomeSubtitle = styled.h2`

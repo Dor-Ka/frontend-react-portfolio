@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaAngleDoubleDown } from 'react-icons/fa';
 
 const pulse = keyframes`
   0%, 100% {
@@ -55,6 +56,15 @@ export const WelcomeName = styled.h1`
   margin-bottom: 0.1rem;
 `;
 
+const moveUpDown = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+`;
+
 export const WelcomeSubtitle = styled.h2`
   display: flex;
   justify-content: center;
@@ -64,6 +74,12 @@ export const WelcomeSubtitle = styled.h2`
   color: ${({ theme }) => theme.text};
   margin: 0 auto;
   margin-top: 1rem;
+
+  & svg {
+    color: ${({ theme }) => theme.primary};
+    margin: 0 0.5rem;
+    animation: ${moveUpDown} 2s infinite ease-in-out;
+  }
 `;
 
 export const HeroContainer = styled.section`

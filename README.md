@@ -15,8 +15,10 @@ It showcases my projects, skills, and contact information, using **React Router*
 - 📱 Fully responsive layout
 - 💼 Project showcase section
 - 📬 Contact page
-- ⚙️ Theme-based color system for consistency
-- 🎨 Color scheme customizable via theme
+- ⚙️ Theme-based color system
+- 🎨 Easy color customization via theme
+- 🖼️ SEO tags and social sharing (Open Graph, Twitter Cards)
+- 📑 Favicon and manifest configured for PWA basics
 
 ## 🛠️ Built With
 
@@ -34,9 +36,11 @@ src/
 ├── pages/           # Page components (Home, About, Projects, Contact)
 ├── styles/          # Global styles and theme setup
 │   ├── GlobalStyles.js
+│   ├── styles.js
 │   ├── theme.js     # Theme configuration (light and dark mode)
 ├── App.jsx          # Main app with routing setup
-└── index.js         # Entry point for the app
+├── index.js         # Entry point for the app
+└── README.md   
 
 ## 📸 Screenshots
 

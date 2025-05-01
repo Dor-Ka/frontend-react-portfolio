@@ -1,17 +1,10 @@
-import { useEffect } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 function Contact() {
-  useEffect(() => {
-    document.title = "Contact | Dorota Karpinska Portfolio";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Get in touch with Dorota Karpinska through email or social media links."
-      );
-    }
-  }, []);
+  usePageMeta(
+    "Contact | Dorota Karpinska Portfolio",
+    "Get in touch with Dorota Karpińska through email or social media links."
+  );
 
   return (
     <div>

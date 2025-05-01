@@ -1,14 +1,10 @@
-import { useEffect } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 function About() {
-  useEffect(() => {
-    document.title = "About | Dorota Karpinska Portfolio";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Learn more about Dorota Karpinska and her work.");
-    }
-  }, []);
+  usePageMeta(
+    "About | Dorota Karpinska Portfolio",
+    "Learn more about Dorota Karpińska, her background, skills, and passions."
+  );
 
   return (
     <div>

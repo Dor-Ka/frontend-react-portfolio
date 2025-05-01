@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 import profileImage from '../../assets/profile.jpeg';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import {
@@ -19,17 +19,10 @@ import {
 
 
 function Home() {
-  useEffect(() => {
-    document.title = "Home | Dorota Karpinska Portfolio";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Welcome to Dorota Karpinska's portfolio. Explore projects, skills, and contact information."
-      );
-    }
-  }, []);
+  usePageMeta(
+    "Home | Dorota Karpinska Portfolio",
+    "Welcome to Dorota Karpinska's portfolio. Explore projects, skills, and contact information."
+  );
 
   return (
     <div>

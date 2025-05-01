@@ -4,30 +4,31 @@ import { FooterContainer, SocialLinks, SocialLink, CopyRight } from "./Footer.st
 function Footer() {
     return (
         <FooterContainer>
-            <SocialLink
-                href="https://github.com/Dor-Ka"
-                target="_blank"
+            <SocialLinks>
+                <SocialLink 
+                href="https://github.com/Dor-Ka" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
-            >
-                <FaGithub />
-            </SocialLink>
-
-            <SocialLink
-                href="https://www.linkedin.com/in/d-karpinska/"
-                target="_blank"
+                >
+                    <FaGithub />
+                </SocialLink>
+                <SocialLink 
+                href="https://www.linkedin.com/in/d-karpinska/" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
-            >
-                <FaLinkedin />
-            </SocialLink>
-
-            <SocialLink
+                >
+                    <FaLinkedin />
+                </SocialLink>
+                <SocialLink 
                 href="mailto:dorotakarpinska.dev@gmail.com"
                 aria-label="Send email to Dorota Karpinska"
-            >
-                <FaEnvelope />
-            </SocialLink>
+                >
+                    <FaEnvelope />
+                </SocialLink>
+            </SocialLinks>
+
             <CopyRight>&copy; 2025 DK Portfolio</CopyRight>
         </FooterContainer>
     );

@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import profileImage from '../../assets/profile.jpeg';
 import { FaAngleDoubleDown } from 'react-icons/fa';
-
 import {
   WelcomeWrapper,
   WelcomeTitle,
@@ -17,7 +17,20 @@ import {
   StyledLink
 } from './Home.styles';
 
-const Home = () => {
+
+function Home() {
+  useEffect(() => {
+    document.title = "Home | Dorota Karpinska Portfolio";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Welcome to Dorota Karpinska's portfolio. Explore projects, skills, and contact information."
+      );
+    }
+  }, []);
+
   return (
     <div>
       <HeroContainer>

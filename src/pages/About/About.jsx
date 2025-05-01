@@ -1,7 +1,21 @@
-import { AboutContainer, AboutContent, AboutImage, AboutText, TechList } from './About.styles';
+import { useEffect } from "react";
 
-const AboutMe = () => {
-  return <h1>About Me</h1>
-};
+function About() {
+  useEffect(() => {
+    document.title = "About | Dorota Karpinska Portfolio";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Learn more about Dorota Karpinska and her work.");
+    }
+  }, []);
 
-export default AboutMe;
+  return (
+    <div>
+      <h1>About Me</h1>
+
+    </div>
+  );
+}
+
+export default About;

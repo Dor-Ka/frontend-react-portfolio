@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
 
-export const Content = styled.div`
+export const AppContent = styled.div`
   flex: 1;
 `;

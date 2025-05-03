@@ -1,4 +1,4 @@
-import { usePageMeta } from "../hooks/usePageMeta";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 function Projects() {
   usePageMeta(

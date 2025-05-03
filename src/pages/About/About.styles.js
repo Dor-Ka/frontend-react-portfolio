@@ -8,7 +8,7 @@ export const AboutSection = styled.section`
 
 export const AboutText = styled.div`
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   p {
     font-size: 1.2rem;
@@ -20,13 +20,30 @@ export const AboutText = styled.div`
 export const AboutList = styled.ul`
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-left: 20vw; 
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
 
   li {
-    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
     font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: left;
     color: ${({ theme }) => theme.text};
-    line-height: 1.4;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+      color: ${({ theme }) => theme.primary};
+      font-size: 1.25rem;
+      line-height: 1;
+    }
   }
 `;
 

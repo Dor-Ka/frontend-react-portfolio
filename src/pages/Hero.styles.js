@@ -1,13 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const moveUpDown = keyframes`
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-`;
+import styled from 'styled-components';
 
 export const HeroContainer = styled.section`
   display: flex;

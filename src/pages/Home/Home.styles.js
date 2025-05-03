@@ -10,6 +10,21 @@ const moveUpDown = keyframes`
   }
 `;
 
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+`;
+
 export const HomeSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -24,12 +39,15 @@ export const HomeSubtitle = styled.h2`
   font-size: 1.5rem;
   font-weight: normal;
   color: ${({ theme }) => theme.text};
-  margin: 2rem auto 0 auto; /* auto po bokach = wyśrodkowanie */
+    margin: 2rem auto 0 auto;
   padding: 0.75rem 1.5rem;
   border: 2px solid ${({ theme }) => theme.primary};
   border-radius: 30px;
-  text-align: center; /* żeby tekst był ładnie na środku wewnątrz */
+  text-align: center; 
   transition: background 0.3s, color 0.3s, border-color 0.3s;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  animation: ${pulse} 3s infinite;
 
   & svg {
     color: ${({ theme }) => theme.primary};

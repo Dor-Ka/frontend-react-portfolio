@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const moveUpDown = keyframes`
   0%, 100% {
@@ -53,10 +52,10 @@ export const HeroSubtitle = styled.h2`
   margin-bottom: 1rem;
 `;
 
-export const HeroDescription = styled.h3`
+export const HeroDescription = styled.p`
   font-size: 1.25rem;
   font-weight: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const HeroContent = styled.div`

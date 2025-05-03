@@ -14,6 +14,7 @@ import {
   TechnologyBadge,
 } from '../Hero.styles'
 import {
+  HomeSection,
   HomeSubtitle,
   HomeLinkRow,
   HomeStyledLink
@@ -27,14 +28,14 @@ function Home() {
   );
 
   return (
-     <div>
+    <HomeSection>
       <HeroContainer>
         <HeroImage src={profileImage} alt="Profile Picture" />
         <HeroWrapper>
           <HeroTitle>Hello, I'm</HeroTitle>
           <HeroName>Dorota Karpinska</HeroName>
           <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
-          <HeroDescription>Building beautiful and functional web apps.</HeroDescription>
+          <HeroDescription>Focusing on both usability and aesthetics in every project.</HeroDescription>
           <HeroContent>
             <HeroTechnologies>
               <TechnologyBadge>React</TechnologyBadge>
@@ -56,7 +57,7 @@ function Home() {
         <HomeStyledLink to="/projects">My Projects</HomeStyledLink>
         <HomeStyledLink to="/contact">Contact Info</HomeStyledLink>
       </HomeLinkRow>
-    </div>
+    </HomeSection>
   );
 };
 

@@ -10,6 +10,22 @@ const moveUpDown = keyframes`
   }
 `;
 
+export const HeroContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: ${({ theme }) => theme.text};
+`;
+
+export const HeroImage = styled.img`
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+`;
+
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,41 +45,18 @@ export const HeroName = styled.h1`
   font-weight: bold;
   color: ${({ theme }) => theme.primary};
   margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 `;
 
-export const WelcomeSubtitle = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+export const HeroSubtitle = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
+
+export const HeroDescription = styled.h3`
+  font-size: 1.25rem;
   font-weight: normal;
-  color: ${({ theme }) => theme.text};
-  margin: 0 auto;
-  margin-top: 1rem;
-
-  & svg {
-    color: ${({ theme }) => theme.primary};
-    margin: 0 0.5rem;
-    animation: ${moveUpDown} 2s infinite ease-in-out;
-  }
-`;
-
-export const HeroContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  color: ${({ theme }) => theme.text};
-`;
-
-export const HeroImage = styled.img`
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  margin-top: 3rem;
+  margin-bottom: 1rem;
 `;
 
 export const HeroContent = styled.div`
@@ -71,17 +64,6 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-`;
-
-export const HeroSubtitle = styled.h2`
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-`;
-
-export const HeroDescription = styled.h3`
-  font-size: 1.25rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
 `;
 
 export const HeroTechnologies = styled.div`
@@ -104,33 +86,5 @@ export const TechnologyBadge = styled.span`
   &:hover {
     background: ${({ theme }) => theme.navBg};
     border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-export const LinkRow = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-`;
-
-export const StyledLink = styled(Link)`
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  color: ${({ theme }) => theme.text};
-  background: ${({ theme }) => theme.primary};
-  border: none;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background 0.3s, border 0.3s, transform 0.1s;
-
-  &:hover {
-    background: ${({ theme }) => theme.navBg};
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-
-  &:active {
-    border: 2px solid ${({ theme }) => theme.primary};
-    transform: scale(1.05);
   }
 `;

@@ -2,19 +2,21 @@ import { usePageMeta } from "../../hooks/usePageMeta";
 import profileImage from '../../assets/profile.jpeg';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import {
-  WelcomeWrapper,
-  WelcomeTitle,
-  WelcomeName,
-  WelcomeSubtitle,
   HeroContainer,
   HeroImage,
-  HeroContent,
+  HeroWrapper,
   HeroTitle,
+  HeroName,
   HeroSubtitle,
+  HeroDescription,
+  HeroContent,
   HeroTechnologies,
   TechnologyBadge,
-  LinkRow,
-  StyledLink
+} from '../Hero.styles'
+import {
+  HomeSubtitle,
+  HomeLinkRow,
+  HomeStyledLink
 } from './Home.styles';
 
 
@@ -25,14 +27,14 @@ function Home() {
   );
 
   return (
-    <div>
+     <div>
       <HeroContainer>
         <HeroImage src={profileImage} alt="Profile Picture" />
-        <WelcomeWrapper>
-          <WelcomeTitle>Hello, I'm</WelcomeTitle>
-          <WelcomeName>Dorota Karpinska</WelcomeName>
-          <HeroTitle>Frontend Developer & Creative Coder</HeroTitle>
-          <HeroSubtitle>Building beautiful and functional web apps.</HeroSubtitle>
+        <HeroWrapper>
+          <HeroTitle>Hello, I'm</HeroTitle>
+          <HeroName>Dorota Karpinska</HeroName>
+          <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
+          <HeroDescription>Building beautiful and functional web apps.</HeroDescription>
           <HeroContent>
             <HeroTechnologies>
               <TechnologyBadge>React</TechnologyBadge>
@@ -41,19 +43,19 @@ function Home() {
               <TechnologyBadge>HTML</TechnologyBadge>
             </HeroTechnologies>
           </HeroContent>
-        </WelcomeWrapper>
+        </HeroWrapper>
       </HeroContainer>
-      <WelcomeSubtitle>
+      <HomeSubtitle>
         <FaAngleDoubleDown />
         Explore My Portfolio
         <FaAngleDoubleDown />
-      </WelcomeSubtitle>
+      </HomeSubtitle>
 
-      <LinkRow>
-        <StyledLink to="/about">About Me</StyledLink>
-        <StyledLink to="/projects">My Projects</StyledLink>
-        <StyledLink to="/contact">Contact Info</StyledLink>
-      </LinkRow>
+      <HomeLinkRow>
+        <HomeStyledLink to="/about">About Me</HomeStyledLink>
+        <HomeStyledLink to="/projects">My Projects</HomeStyledLink>
+        <HomeStyledLink to="/contact">Contact Info</HomeStyledLink>
+      </HomeLinkRow>
     </div>
   );
 };

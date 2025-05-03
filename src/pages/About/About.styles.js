@@ -1,48 +1,27 @@
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
-  padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 `;
 
-export const AboutText = styled.div`
-  text-align: center;
-  margin-bottom: 2rem;
-
-  p {
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.text};
-    line-height: 1.6;
-  }
-`;
-
 export const AboutList = styled.ul`
-  list-style: none;
+  list-style: disc inside;
   padding: 0;
   margin-top: 0.5rem;
-  margin-left: 20vw; 
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: flex-start;
-
+  margin-left: clamp(1rem, 5vw, 3rem); 
+  border-left: 2px solid ${({ theme }) => theme.primary};
+  padding-left: 1.5rem;
+  
   li {
-    position: relative;
-    padding-left: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 1.125rem;
     line-height: 1.5;
-    text-align: left;
     color: ${({ theme }) => theme.text};
+    transition: color 0.3s ease;
 
-    &::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0.2rem;
+    &:hover {
       color: ${({ theme }) => theme.primary};
-      font-size: 1.25rem;
-      line-height: 1;
     }
   }
 `;

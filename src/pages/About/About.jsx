@@ -26,25 +26,19 @@ function About() {
       <HeroContainer>
         <HeroImage src={profileImage} alt="Profile Picture" />
         <HeroWrapper>
-          <HeroName>Dorota Karpinska</HeroName>
+          <HeroName>Hi, I'm Dorota Karpinska</HeroName>
           <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
         </HeroWrapper>
+        <AboutList>
+          <li>Crafting responsive, user-friendly websites.</li>
+          <li>Passionate about clean code, accessibility, and UX.</li>
+          <li>Continuously improving through hands-on projects.</li>
+          <li>Striving for a balance between design aesthetics and performance.</li>
+        </AboutList>
       </HeroContainer>
 
-
       <AboutSection>
-        <AboutText>
-          <TitleH2>Hi, I'm Dorota – Frontend Developer</TitleH2>
-          <AboutList>
-            <li>Crafting responsive, user-friendly websites.</li>
-            <li>Passionate about clean code, accessibility, and UX.</li>
-            <li>Continuously improving through hands-on projects.</li>
-            <li>Striving for a balance between design aesthetics and performance.</li>
-          </AboutList>
-        </AboutText>
-
         <TitleH2>My Skills</TitleH2>
-
         <SkillsSection>
           <SkillsCards>
             <SkillCard>

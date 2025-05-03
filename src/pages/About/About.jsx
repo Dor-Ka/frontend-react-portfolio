@@ -60,17 +60,11 @@ function About() {
             </SkillCard>
 
             <SkillCard>
-              <h3>Design & UI/UX</h3>
+              <h3>Design & Tools</h3>
               <ul>
                 <li>Responsive Design</li>
                 <li>UI/UX Design</li>
                 <li>Figma & Canva</li>
-              </ul>
-            </SkillCard>
-
-            <SkillCard>
-              <h3>Tools & Collaboration</h3>
-              <ul>
                 <li>Git & GitHub</li>
                 <li>VSCode & WebStorm</li>
                 <li>Trello</li>
@@ -78,18 +72,18 @@ function About() {
             </SkillCard>
 
             <SkillCard>
-              <h3>Other Skills</h3>
+              <h3>Best Practices</h3>
               <ul>
                 <li>Accessibility (WCAG)</li>
                 <li>SEO</li>
-                <li>Agile (Scrum)</li>
                 <li>Immutability</li>
               </ul>
             </SkillCard>
 
             <SkillCard>
-              <h3>Soft Skills</h3>
+              <h3>Workflow & Soft Skills</h3>
               <ul>
+                <li>Agile (Scrum)</li>
                 <li>Communication</li>
                 <li>Problem Solving</li>
                 <li>Collaboration</li>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
-  padding: 0rem 1rem;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -9,50 +9,69 @@ export const AboutSection = styled.section`
 export const AboutText = styled.div`
   text-align: center;
   margin-bottom: 3rem;
+
+  p {
+    font-size: 1.2rem;
+    color: ${({ theme }) => theme.text};
+    line-height: 1.6;
+  }
 `;
 
 export const AboutList = styled.ul`
   list-style: none;
   padding: 0;
-  margin-top: 1.5rem;
-  
+  margin-top: 2rem;
+
   li {
     margin-bottom: 1rem;
     font-size: 1.125rem;
-    line-height: 1.2;
+    color: ${({ theme }) => theme.text};
+    line-height: 1.4;
   }
 `;
 
-export const SkillsSection = styled.div`
-  margin-bottom: 2rem;
+export const SkillsSection = styled.section`
+  margin-bottom: 4rem;
 `;
 
 export const SkillsCards = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SkillCard = styled.div`
-//   background-color: ${({ theme }) => theme.cardBackground || "#fff"};
-  border: 1px solid ${({ theme }) => theme.borderColor || "#ddd"};
+  background-color: ${({ theme }) => theme.background};
+  border: 1px solid ${({ theme }) => theme.secondary};
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     color: ${({ theme }) => theme.primary};
   }
 
-  p {
-    font-size: 1rem;
-    color: ${({ theme }) => theme.textSecondary};
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      color: ${({ theme }) => theme.text};
+    }
   }
 `;

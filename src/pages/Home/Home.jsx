@@ -1,10 +1,14 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
 import profileImage from '../../assets/profile.jpeg';
+import logoImage from "../../assets/logo.png"
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import {
   HeroContainer,
-  HeroImage,
   HeroWrapper,
+  LogoContainer,
+  LogoInner,
+  LogoFront,
+  LogoBack,
   HeroTitle,
   HeroName,
   HeroSubtitle,
@@ -44,7 +48,12 @@ function Home() {
             </HeroTechnologies>
           </HeroContent>
         </HeroWrapper>
-        <HeroImage src={profileImage} alt="Profile Picture" />
+        <LogoContainer>
+      <LogoInner>
+        <LogoFront src={logoImage} alt="Logo" />
+        <LogoBack src={profileImage} alt="Profile" />
+      </LogoInner>
+    </LogoContainer>
       </HeroContainer>
       <HomeSubtitle>
         <FaAngleDoubleDown />

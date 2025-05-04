@@ -9,6 +9,44 @@ export const HeroContainer = styled.section`
   color: ${({ theme }) => theme.text};
 `;
 
+export const LogoContainer = styled.div`
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+`;
+
+export const LogoInner = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
+
+export const LogoFront = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
+export const LogoBack = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
 export const HeroImage = styled.img`
   border-radius: 50%;
   width: 180px;

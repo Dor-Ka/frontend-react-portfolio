@@ -50,8 +50,8 @@ function Home() {
         </HeroWrapper>
         <LogoContainer>
       <LogoInner>
-        <LogoFront src={logoImage} alt="Logo" />
-        <LogoBack src={profileImage} alt="Profile" />
+      <LogoFront src={profileImage} alt="Profile" />
+      <LogoBack src={logoImage} alt="Logo" />
       </LogoInner>
     </LogoContainer>
       </HeroContainer>

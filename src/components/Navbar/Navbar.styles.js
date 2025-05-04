@@ -3,6 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { FaLightbulb } from 'react-icons/fa';
 
 
+export const LogoImage = styled.img`
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+`;
+
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;

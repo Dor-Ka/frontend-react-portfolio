@@ -1,9 +1,14 @@
-import { Nav, Logo, NavLinks, StyledNavLink, ThemeToggleButton, StyledLightbulb } from "./Navbar.styles";
+import { Nav, Logo, LogoImage, NavLinks, StyledNavLink, ThemeToggleButton, StyledLightbulb } from "./Navbar.styles";
+import logoImg from '../../assets/logo.png';
+
+
 
 function Navbar({ toggleTheme, isDarkMode }) {
   return (
     <Nav>
-      <Logo>DK Portfolio</Logo>
+      <Logo> 
+        <LogoImage src={logoImg} alt="My Logo" /> 
+        </Logo>
       <NavLinks>
         <li>
           <StyledNavLink to="/" end>

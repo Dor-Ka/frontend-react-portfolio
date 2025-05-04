@@ -30,7 +30,6 @@ function Home() {
   return (
     <HomeSection>
       <HeroContainer>
-        <HeroImage src={profileImage} alt="Profile Picture" />
         <HeroWrapper>
           <HeroTitle>Hello, I'm</HeroTitle>
           <HeroName>Dorota Karpinska</HeroName>
@@ -45,6 +44,7 @@ function Home() {
             </HeroTechnologies>
           </HeroContent>
         </HeroWrapper>
+        <HeroImage src={profileImage} alt="Profile Picture" />
       </HeroContainer>
       <HomeSubtitle>
         <FaAngleDoubleDown />

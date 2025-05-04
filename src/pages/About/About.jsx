@@ -24,11 +24,11 @@ function About() {
   return (
     <>
       <HeroContainer>
-        <HeroImage src={profileImage} alt="Profile Picture" />
         <HeroWrapper>
           <HeroName>Hi, I'm Dorota Karpinska</HeroName>
           <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
         </HeroWrapper>
+        <HeroImage src={profileImage} alt="Profile Picture" />
         <AboutList>
           <li>Crafting responsive, user-friendly websites.</li>
           <li>Passionate about clean code, accessibility, and UX.</li>

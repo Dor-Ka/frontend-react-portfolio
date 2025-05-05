@@ -2,7 +2,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import { AppWrapper, AppContent } from './styles/AppStyles';
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { lightTheme, darkTheme } from './styles/theme';
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -15,8 +15,22 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const toggleTheme = () => setIsDarkMode(prev => !prev);
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      setIsDarkMode(false);
+    } else if (savedTheme === 'dark') {
+      setIsDarkMode(true);
+    }
+  }, []);
 
+  const toggleTheme = () => {
+    setIsDarkMode(prev => {
+      const newMode = !prev;
+      localStorage.setItem('theme', newMode ? 'dark' : 'light');
+      return newMode;
+    });
+  };
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>

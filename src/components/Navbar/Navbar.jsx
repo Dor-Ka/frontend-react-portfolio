@@ -1,23 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import { Nav, Logo, NavLinks, StyledLogoLink, StyledNavLink, ThemeToggleButton, StyledLightbulb, HamburgerButton } from "./Navbar.styles";
 import { HiMenu, HiX } from 'react-icons/hi';
 
 function Navbar({ toggleTheme, isDarkMode }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsMobile(window.innerWidth < 680);
-    }
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 680);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <Nav>

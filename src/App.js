@@ -11,16 +11,21 @@ import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
-
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      setIsDarkMode(false);
-    } else if (savedTheme === 'dark') {
-      setIsDarkMode(true);
+
+    if (savedTheme) {
+      if (savedTheme === 'light') {
+        setIsDarkMode(false);
+      } else if (savedTheme === 'dark') {
+        setIsDarkMode(true);
+      }
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDarkMode(prefersDark);
     }
   }, []);
 

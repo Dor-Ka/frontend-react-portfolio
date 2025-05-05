@@ -51,7 +51,7 @@ function Navbar({ toggleTheme, isDarkMode }) {
         </li>
       </NavLinks>
 
-      <ThemeToggleButton isDarkMode={isDarkMode} onClick={toggleTheme}>
+      <ThemeToggleButton onClick={toggleTheme}>
         <StyledLightbulb isDarkMode={isDarkMode} />
       </ThemeToggleButton>
     </Nav>

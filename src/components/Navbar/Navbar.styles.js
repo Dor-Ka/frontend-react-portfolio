@@ -92,9 +92,6 @@ export const ThemeToggleButton = styled.button`
   color: ${({ theme }) => theme.text};
   transition: background-color 0.3s ease, transform 0.2s ease;
 
-  box-shadow: ${({ isDarkMode, theme }) => 
-   isDarkMode ? 'none' : `0 0 10px 4px ${theme.primary}`};
-
   &:hover {
     transform: scale(1.1);
     background-color: ${({ theme }) => theme.toggleHover};
@@ -107,8 +104,13 @@ export const ThemeToggleButton = styled.button`
 
 export const StyledLightbulb = styled(FaLightbulb)`
   font-size: 1.6rem;
-  color: ${({ theme, isDarkMode }) => isDarkMode ? theme.lightbulbOn : theme.lightbulbOff};
+  color: ${({ theme, isDarkMode }) => isDarkMode ? theme.lightbulbOff : theme.lightbulbOn};
   transition: color 0.3s ease;
+
+    ${({ isDarkMode, theme }) => 
+    isDarkMode && `
+      filter: drop-shadow(0 0 4px ${theme.primary});
+    `}
 `;
 
 export const HamburgerButton = styled.button`

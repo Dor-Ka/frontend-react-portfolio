@@ -1,49 +1,46 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+export const WelcomeWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-top: 5rem; 
+  position: relative; 
+`;
+
+export const LogoIntro = styled(motion.div)`
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%); 
+  font-size: 5rem;
+  font-weight: bold;
+`;
+
+export const WelcomeContent = styled(motion.div)`
+  position: absolute;
+  top: 2rem; 
+  left: 50%;
+  transform: translateX(-50%); 
+  text-align: center;
+  opacity: 0; 
+`;
 
 export const HeroContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  margin: 0;
+  padding: 0rem;
   color: ${({ theme }) => theme.text};
 `;
 
-export const LogoContainer = styled.div`
+export const LogoImage = styled.img`
+  border-radius: 50%;
   width: 180px;
   height: 180px;
-  perspective: 1000px;
-`;
-
-export const LogoInner = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-
-  &:hover {
-    transform: rotateY(180deg);
-  }
-`;
-
-export const LogoFront = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; 
-  border-radius: 50%;
-  object-fit: cover;
-`;
-
-export const LogoBack = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  border-radius: 50%;
   object-fit: cover;
 `;
 

@@ -1,14 +1,11 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
-import profileImage from '../../assets/profile.jpeg';
-import logoImage from "../../assets/logo.png"
-import { FaAngleDoubleDown } from 'react-icons/fa';
 import {
-  HeroContainer,
+  WelcomeWrapper,
+  LogoIntro,
+  WelcomeContent,
+  LogoImage,
+  HeroImage,
   HeroWrapper,
-  LogoContainer,
-  LogoInner,
-  LogoFront,
-  LogoBack,
   HeroTitle,
   HeroName,
   HeroSubtitle,
@@ -18,22 +15,37 @@ import {
   TechnologyBadge,
 } from '../Hero.styles'
 import {
-  HomeSection,
   HomeSubtitle,
   HomeLinkRow,
   HomeStyledLink
 } from './Home.styles';
-
+import logoImage from "../../assets/logo.png"
+import profileImage from '../../assets/profile.jpeg';
+import { FaAngleDoubleDown } from 'react-icons/fa';
 
 function Home() {
+
   usePageMeta(
     "Home | Dorota Karpinska Portfolio",
     "Welcome to Dorota Karpinska's portfolio. Explore projects, skills, and contact information."
   );
 
   return (
-    <HomeSection>
-      <HeroContainer>
+    <WelcomeWrapper>
+      <LogoIntro
+        initial={{ x: "-50%", y: "-50%", scale: 1 }}
+        animate={{ x: "30vw", y: "-50%", scale: 0.5 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+      >
+        <LogoImage src={logoImage} alt="Profile Picture" />
+      </LogoIntro>
+
+      <WelcomeContent
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
+        <HeroImage src={profileImage} alt="Profile Picture" />
         <HeroWrapper>
           <HeroTitle>Hello, I'm</HeroTitle>
           <HeroName>Dorota Karpinska</HeroName>
@@ -48,25 +60,19 @@ function Home() {
             </HeroTechnologies>
           </HeroContent>
         </HeroWrapper>
-        <LogoContainer>
-      <LogoInner>
-      <LogoFront src={profileImage} alt="Profile" />
-      <LogoBack src={logoImage} alt="Logo" />
-      </LogoInner>
-    </LogoContainer>
-      </HeroContainer>
-      <HomeSubtitle>
-        <FaAngleDoubleDown />
-        Explore My Portfolio
-        <FaAngleDoubleDown />
-      </HomeSubtitle>
+        <HomeSubtitle>
+          <FaAngleDoubleDown />
+          Explore My Portfolio
+          <FaAngleDoubleDown />
+        </HomeSubtitle>
 
-      <HomeLinkRow>
-        <HomeStyledLink to="/about">About Me</HomeStyledLink>
-        <HomeStyledLink to="/projects">My Projects</HomeStyledLink>
-        <HomeStyledLink to="/contact">Contact Info</HomeStyledLink>
-      </HomeLinkRow>
-    </HomeSection>
+        <HomeLinkRow>
+          <HomeStyledLink to="/about">About Me</HomeStyledLink>
+          <HomeStyledLink to="/projects">My Projects</HomeStyledLink>
+          <HomeStyledLink to="/contact">Contact Info</HomeStyledLink>
+        </HomeLinkRow>
+      </WelcomeContent>
+    </WelcomeWrapper>
   );
 };
 

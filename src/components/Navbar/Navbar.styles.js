@@ -24,6 +24,12 @@ export const Logo = styled.h1`
   font-size: 2rem;
 `;
 
+export const StyledLogoLink = styled(NavLink)`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+`;
+
 export const NavLinks = styled.ul`
   list-style: none;
   display: flex;

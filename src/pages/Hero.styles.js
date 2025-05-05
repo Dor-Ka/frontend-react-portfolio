@@ -19,11 +19,6 @@ export const LogoIntro = styled(motion.div)`
     top: 2vh;
     left: 40%;
   }
-
-  @media (max-width: 300px) {
-    top: 2vh;
-    left: 40%;
-  }
 `;
 
 export const WelcomeContent = styled(motion.div)`

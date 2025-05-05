@@ -22,15 +22,6 @@ export const Logo = styled.h1`
   color: ${({ theme }) => theme.primary};
   margin: 0;
   font-size: 2rem;
-
-
- @media (max-width: 680px) {
-    font-size: 1.5rem;
-}
-
-@media (max-width: 480px) {
-    font-size: 1rem;
-}
 `;
 
 export const NavLinks = styled.ul`
@@ -40,17 +31,21 @@ export const NavLinks = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 680px) {
-   gap: 1rem;
+    @media (max-width: 680px) {
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: ${({ theme }) => theme.navBg};
+    padding: 0.75rem;
+    align-items: center;
+    gap: 1.25rem;
+    transform: ${({ $isOpen }) => ($isOpen ? 'translateY(0)' : 'translateY(-200%)')};
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
-
-  @media (max-width: 480px) {
-   gap: 1rem;
-  }
-
-  @media (max-width: 300px) {
-   gap: 0.4rem;
-  }
+ }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -112,3 +107,17 @@ export const StyledLightbulb = styled(FaLightbulb)`
   color: ${({ theme, isDarkMode }) => isDarkMode ? theme.lightbulbOn : theme.lightbulbOff};
   transition: color 0.3s ease;
 `;
+
+export const HamburgerButton = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.text};
+  z-index: 1001;
+
+  @media (max-width: 680px) {
+    display: block;
+  }
+`;
+

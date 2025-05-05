@@ -3,14 +3,18 @@ import { Nav, Logo, NavLinks, StyledNavLink, ThemeToggleButton, StyledLightbulb,
 import { HiMenu, HiX } from 'react-icons/hi';
 
 function Navbar({ toggleTheme, isDarkMode }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 560);
+  const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 560);
+    }
+  
     const handleResize = () => {
       setIsMobile(window.innerWidth < 560);
     };
-
+  
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -47,7 +51,7 @@ function Navbar({ toggleTheme, isDarkMode }) {
         </li>
       </NavLinks>
 
-      <ThemeToggleButton onClick={toggleTheme}>
+      <ThemeToggleButton isDarkMode={isDarkMode} onClick={toggleTheme}>
         <StyledLightbulb isDarkMode={isDarkMode} />
       </ThemeToggleButton>
     </Nav>

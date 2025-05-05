@@ -92,6 +92,9 @@ export const ThemeToggleButton = styled.button`
   color: ${({ theme }) => theme.text};
   transition: background-color 0.3s ease, transform 0.2s ease;
 
+  box-shadow: ${({ isDarkMode, theme }) => 
+   isDarkMode ? 'none' : `0 0 10px 4px ${theme.primary}`};
+
   &:hover {
     transform: scale(1.1);
     background-color: ${({ theme }) => theme.toggleHover};

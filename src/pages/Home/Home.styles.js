@@ -64,15 +64,43 @@ export const HomeSubtitle = styled.h2`
       color: ${({ theme }) => theme.navBg};
     }
   }
+  
+  @media (max-width: 680px) {
+      font-size: 1.2rem;
+      padding: 0.6rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.5rem;
+  }
+
+  @media (max-width: 300px) {
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem;
+  }
 `;
-
-
 
 export const HomeLinkRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: 680px) {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.9rem;
+    margin-top: 1.25rem;
+  }
+
+  @media (max-width: 300px) {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const HomeStyledLink = styled(Link)`
@@ -93,5 +121,20 @@ export const HomeStyledLink = styled(Link)`
   &:active {
     border: 2px solid ${({ theme }) => theme.primary};
     transform: scale(1.05);
+  }
+
+  @media (max-width: 680px) {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 300px) {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
   }
 `;

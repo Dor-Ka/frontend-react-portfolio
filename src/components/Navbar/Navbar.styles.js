@@ -21,6 +21,16 @@ export const Nav = styled.nav`
 export const Logo = styled.h1`
   color: ${({ theme }) => theme.primary};
   margin: 0;
+  font-size: 2rem;
+
+
+ @media (max-width: 680px) {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    font-size: 1rem;
+}
 `;
 
 export const NavLinks = styled.ul`
@@ -29,10 +39,23 @@ export const NavLinks = styled.ul`
   gap: 1rem;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 680px) {
+   gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+   gap: 1rem;
+  }
+
+  @media (max-width: 300px) {
+   gap: 0.4rem;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.primary};
+  font-size: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
 
@@ -45,6 +68,18 @@ export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.navActive};
   text-decoration-line: underline;
   text-underline-offset: 8px;
+  }
+
+  @media (max-width: 680px) {
+      font-size: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 1rem;
+  }
+
+  @media (max-width: 300px) {
+      font-size: 0.9rem;
   }
 `;
 

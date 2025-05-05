@@ -2,29 +2,37 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const WelcomeWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; 
-  padding-top: 5rem; 
   position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 `;
 
 export const LogoIntro = styled(motion.div)`
   position: absolute;
-  top: 5rem;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%); 
-  font-size: 5rem;
-  font-weight: bold;
+
+  @media (max-width: 680px) {
+    top: 2vh;
+    left: 40%;
+  }
+
+  @media (max-width: 300px) {
+    top: 2vh;
+    left: 40%;
+  }
 `;
 
 export const WelcomeContent = styled(motion.div)`
-  position: absolute;
-  top: 2rem; 
-  left: 50%;
-  transform: translateX(-50%); 
+  margin-top: 1rem; 
   text-align: center;
-  opacity: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
 `;
 
 export const HeroContainer = styled.section`
@@ -42,6 +50,21 @@ export const LogoImage = styled.img`
   width: 180px;
   height: 180px;
   object-fit: cover;
+
+  @media (max-width: 680px) {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  @media (max-width: 300px) {
+    max-width: 80px;
+    max-height: 80px;
+  }
 `;
 
 export const HeroImage = styled.img`
@@ -49,6 +72,21 @@ export const HeroImage = styled.img`
   width: 180px;
   height: 180px;
   object-fit: cover;
+
+  @media (max-width: 680px) {
+    max-width: 140px;
+    max-height: 140px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  @media (max-width: 300px) {
+    max-width: 80px;
+    max-height: 80px;
+  }
 `;
 
 export const HeroWrapper = styled.div`
@@ -63,6 +101,18 @@ export const HeroTitle = styled.h1`
   font-size: 1.75rem;
   color: ${({ theme }) => theme.text};
   margin-bottom: 0.1rem;
+
+  @media (max-width: 680px) {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const HeroName = styled.h1`
@@ -71,17 +121,49 @@ export const HeroName = styled.h1`
   color: ${({ theme }) => theme.primary};
   margin-top: 0;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 680px) {
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const HeroSubtitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 680px) {
+    font-size: 1.75rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const HeroDescription = styled.p`
   font-size: 1.25rem;
   font-weight: normal;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 680px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -111,5 +193,20 @@ export const TechnologyBadge = styled.span`
   &:hover {
     background: ${({ theme }) => theme.navBg};
     border: 1px solid ${({ theme }) => theme.primary};
+  }
+
+  @media (max-width: 680px) {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+  }
+
+  @media (max-width: 300px) {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
   }
 `;

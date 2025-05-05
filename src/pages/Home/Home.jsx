@@ -33,7 +33,7 @@ function Home() {
   return (
     <WelcomeWrapper>
       <LogoIntro
-        initial={{ x: "-50%", y: "-50%", scale: 1 }}
+        initial={{ x: "-50%", y: "-20%", scale: 1 }}
         animate={{ x: "30vw", y: "-50%", scale: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >

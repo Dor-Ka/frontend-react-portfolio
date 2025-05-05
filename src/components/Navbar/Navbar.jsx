@@ -1,11 +1,23 @@
+import { useState, useEffect } from 'react';
 import { Nav, Logo, NavLinks, StyledNavLink, ThemeToggleButton, StyledLightbulb } from "./Navbar.styles";
 
 
 function Navbar({ toggleTheme, isDarkMode }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 560);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 560);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Nav>
       <Logo> 
-        DK Portfolio 
+        {isMobile ? 'DK' : 'DK Portfolio'}
         </Logo>
       <NavLinks>
         <li>

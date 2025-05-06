@@ -1,7 +1,26 @@
 # React Portfolio
 
+![GitHub repo size](https://img.shields.io/github/repo-size/dor-ka/frontend-react-portfolio)
+![GitHub issues](https://img.shields.io/github/issues/dor-ka/frontend-react-portfolio)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/dor-ka/frontend-react-portfolio)
+![GitHub deployments](https://img.shields.io/github/deployments/dor-ka/frontend-react-portfolio/github-pages)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![React](https://img.shields.io/badge/React-18-blue.svg)
+![Made with Styled Components](https://img.shields.io/badge/Styled--Components-%23db7093.svg?logo=styled-components&logoColor=white)
+
+
 This is my personal portfolio website built with **React**. 
 It showcases my projects, skills, and contact information, using **React Router** for multi-page navigation and custom theme with dark and light mode support.
+
+## 📛 Badges
+
+- ![GitHub repo size](https://img.shields.io/github/repo-size/dor-ka/frontend-react-portfolio) **Repository size** – Shows the total size of the project.
+- ![GitHub issues](https://img.shields.io/github/issues/dor-ka/frontend-react-portfolio) **Open issues** – Displays the number of currently open issues.
+- ![GitHub pull requests](https://img.shields.io/github/issues-pr/dor-ka/frontend-react-portfolio) **Pull requests** – Shows the number of open pull requests.
+- ![GitHub deployments](https://img.shields.io/github/deployments/dor-ka/frontend-react-portfolio/github-pages) **Deployment status** – Indicates deployment status to GitHub Pages.
+- ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) **License** – Licensed under MIT.
+- ![React](https://img.shields.io/badge/React-18-blue.svg) **React** – Built with React 18.
+- ![Made with Styled Components](https://img.shields.io/badge/Styled--Components-%23db7093.svg?logo=styled-components&logoColor=white) **Styled Components** – Styled using the Styled Components library.
 
 ## 🌐 Live Demo
 

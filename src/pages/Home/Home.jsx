@@ -1,4 +1,10 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
+
+import { FaAngleDoubleDown } from 'react-icons/fa';
+
+import logoImage from "../../assets/logo.png"
+import profileImage from '../../assets/profile.jpeg';
+
 import {
   WelcomeWrapper,
   LogoIntro,
@@ -14,14 +20,9 @@ import {
   HeroTechnologies,
   TechnologyBadge,
 } from '../Hero.styles'
-import {
-  HomeSubtitle,
-  HomeLinkRow,
-  HomeStyledLink
-} from './Home.styles';
-import logoImage from "../../assets/logo.png"
-import profileImage from '../../assets/profile.jpeg';
-import { FaAngleDoubleDown } from 'react-icons/fa';
+
+import { HomeSubtitle, HomeLinkRow, HomeStyledLink} from './Home.styles';
+
 
 function Home() {
 
@@ -37,7 +38,7 @@ function Home() {
         animate={{ x: "30vw", y: "-50%", scale: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
-        <LogoImage src={logoImage} alt="Profile Picture" />
+        <LogoImage src={logoImage} alt="Logo Dorota Karpinska" />
       </LogoIntro>
 
       <WelcomeContent
@@ -45,7 +46,7 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        <HeroImage src={profileImage} alt="Profile Picture" />
+        <HeroImage src={profileImage} alt="Profile Picture Dorota Karpinska" />
         <HeroWrapper>
           <HeroTitle>Hello, I'm</HeroTitle>
           <HeroName>Dorota Karpinska</HeroName>

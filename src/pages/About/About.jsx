@@ -5,7 +5,7 @@ import { TitleH2 } from "../Title";
 import profileImage from '../../assets/profile.jpeg';
 import logoImage from "../../assets/logo.png";
 
-import { HeroContainer, LogoImage, HeroImage, HeroWrapper, HeroName, HeroSubtitle} from '../Hero.styles';
+import { HeroContainer, HeroImage, HeroWrapper, HeroName, HeroSubtitle} from '../Hero.styles';
 
 import { AboutSection, AboutList, SkillsSection, SkillsCards, SkillCard} from './About.styles';
 
@@ -23,7 +23,6 @@ function About() {
           <HeroName>Hi, I'm Dorota Karpinska</HeroName>
           <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
         </HeroWrapper>
-        <LogoImage src={logoImage} alt="Logo Dorota Karpinska" />
         <HeroImage src={profileImage} alt="Profile Picture Dorota Karpinska" />
       </HeroContainer>
 

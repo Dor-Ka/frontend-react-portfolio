@@ -50,18 +50,40 @@ export const AboutList = styled.ul`
   li:hover {
     color: ${({ theme }) => theme.primary};
   }
+
+    @media (max-width: 680px) {
+    li {
+      font-size: 1rem;
+      padding-left: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    li {
+      font-size: 0.8rem;
+      padding-left: 1rem;
+    }
+  }
+
+  @media (max-width: 300px) {
+    li {
+      font-size: 0.7rem;
+      padding-left: 0.8rem;
+    }
+  }
 `;
 
 export const SkillsSection = styled.section`
+  margin: 1rem;
   margin-bottom: 4rem;
 `;
 
 export const SkillsCards = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 680px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -95,6 +117,32 @@ export const SkillCard = styled.div`
       margin-bottom: 0.75rem;
       font-size: 1.1rem;
       color: ${({ theme }) => theme.text};
+    }
+  }
+
+   @media (max-width: 680px) {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    ul li {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    ul li {
+      font-size: 0.95rem;
     }
   }
 `;

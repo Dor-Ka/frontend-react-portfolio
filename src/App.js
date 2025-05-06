@@ -1,9 +1,12 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyles";
-import { AppWrapper, AppContent } from './styles/AppStyles';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './styles/theme';
+
 import { useThemeMode } from './hooks/useThemeMode';
+
+import { AppWrapper, AppContent } from './styles/AppStyles';
+import { lightTheme, darkTheme } from './styles/theme';
+
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";

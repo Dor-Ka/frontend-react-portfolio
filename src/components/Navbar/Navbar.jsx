@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useIsMobile } from '../../hooks/useIsMobile';
+
+import { HiMenu, HiX } from 'react-icons/hi';
+
 import { 
   Nav, 
   Logo, 
@@ -11,7 +14,6 @@ import {
   HamburgerButton,
   Overlay 
 } from "./Navbar.styles";
-import { HiMenu, HiX } from 'react-icons/hi';
 
 
 function Navbar({ toggleTheme, isDarkMode }) {

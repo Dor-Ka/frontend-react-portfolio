@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 
 const moveUpDown = keyframes`
   0%, 100% {

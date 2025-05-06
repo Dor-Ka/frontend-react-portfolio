@@ -19,6 +19,8 @@ It showcases my projects, skills, and contact information, using **React Router*
 - 🎨 Easy color customization via theme
 - 🖼️ SEO tags and social sharing (Open Graph, Twitter Cards)
 - 📑 Favicon and manifest configured for PWA basics
+- 🍔 Mobile menu with hamburger button 
+- 🛑 Mobile menu closes on overlay click and Escape key press
 
 ## 🛠️ Built With
 
@@ -31,9 +33,17 @@ It showcases my projects, skills, and contact information, using **React Router*
 
 src/
 ├── components/      # Navbar, Footer, and other reusable components
-│   ├── Navbar
-│   ├── Footer
+│   ├── Navbar/
+│   ├── Footer/
+├── hooks/            # Custom React hooks
+│   ├── usePageMeta.js
+│   ├── useIsMobile.js
+│   ├── useThemeMode.js
 ├── pages/           # Page components (Home, About, Projects, Contact)
+│   ├── Home/
+│   ├── About/
+│   ├── Projects/
+│   ├── Contact/
 ├── styles/          # Global styles and theme setup
 │   ├── GlobalStyles.js
 │   ├── styles.js

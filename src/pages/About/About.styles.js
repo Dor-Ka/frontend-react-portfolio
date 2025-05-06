@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideInLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const AboutSection = styled.section`
   max-width: 1200px;
@@ -6,23 +17,38 @@ export const AboutSection = styled.section`
 `;
 
 export const AboutList = styled.ul`
-  list-style: disc inside;
+  margin: 0 auto 3rem auto;
   padding: 0;
-  margin-top: 0.5rem;
-  margin-left: clamp(1rem, 5vw, 3rem); 
-  border-left: 2px solid ${({ theme }) => theme.primary};
-  padding-left: 1.5rem;
+  list-style: none;
+  width: fit-content;
   
   li {
+    position: relative;
+    padding-left: 1.5rem; 
     margin-bottom: 1rem;
     font-size: 1.125rem;
     line-height: 1.5;
     color: ${({ theme }) => theme.text};
     transition: color 0.3s ease;
+    opacity: 0;
+    animation: ${slideInLeft} 1.2s ease-out forwards;
+  }
 
-    &:hover {
-      color: ${({ theme }) => theme.primary};
-    }
+  li:nth-child(1) { animation-delay: 0.3s; }
+  li:nth-child(2) { animation-delay: 0.6s; }
+  li:nth-child(3) { animation-delay: 0.9s; }
+  li:nth-child(4) { animation-delay: 1.2s; }
+
+  li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: ${({ theme }) => theme.primary};
+    font-size: 1.2rem;
+  }
+
+  li:hover {
+    color: ${({ theme }) => theme.primary};
   }
 `;
 
@@ -33,7 +59,7 @@ export const SkillsSection = styled.section`
 export const SkillsCards = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -43,14 +69,15 @@ export const SkillsCards = styled.div`
 export const SkillCard = styled.div`
   background-color: ${({ theme }) => theme.background};
   border: 1px solid ${({ theme }) => theme.secondary};
-  padding: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
   border-radius: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px ${({ theme }) => theme.primary};
   }
 
   h3 {

@@ -1,18 +1,13 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
+
 import { TitleH2 } from "../Title";
 
-import {
-  HeroContainer,
-  HeroImage,
-  HeroWrapper,
-  HeroName,
-  HeroSubtitle
-} from '../Hero.styles'
-import { AboutSection, AboutText, AboutList, SkillsSection, SkillsCards, SkillCard } from './About.styles';
-
 import profileImage from '../../assets/profile.jpeg';
+import logoImage from "../../assets/logo.png";
 
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import { HeroContainer, LogoImage, HeroImage, HeroWrapper, HeroName, HeroSubtitle} from '../Hero.styles';
+
+import { AboutSection, AboutList, SkillsSection, SkillsCards, SkillCard} from './About.styles';
 
 
 function About() {
@@ -28,16 +23,17 @@ function About() {
           <HeroName>Hi, I'm Dorota Karpinska</HeroName>
           <HeroSubtitle>Frontend Developer & Creative Coder</HeroSubtitle>
         </HeroWrapper>
-        <HeroImage src={profileImage} alt="Profile Picture" />
+        <LogoImage src={logoImage} alt="Logo Dorota Karpinska" />
+        <HeroImage src={profileImage} alt="Profile Picture Dorota Karpinska" />
+      </HeroContainer>
+
+      <AboutSection>
         <AboutList>
           <li>Crafting responsive, user-friendly websites.</li>
           <li>Passionate about clean code, accessibility, and UX.</li>
           <li>Continuously improving through hands-on projects.</li>
           <li>Striving for a balance between design aesthetics and performance.</li>
         </AboutList>
-      </HeroContainer>
-
-      <AboutSection>
         <TitleH2>My Skills</TitleH2>
         <SkillsSection>
           <SkillsCards>
@@ -46,7 +42,6 @@ function About() {
               <ul>
                 <li>React</li>
                 <li>JavaScript</li>
-                <li>TypeScript</li>
                 <li>HTML & CSS</li>
                 <li>API Integration</li>
                 <li>Redux & Redux-Saga</li>
@@ -56,12 +51,11 @@ function About() {
             <SkillCard>
               <h3>Design & Tools</h3>
               <ul>
+                <li>Git & GitHub</li>
+                <li>VSCode & WebStorm</li>
                 <li>Responsive Design</li>
                 <li>UI/UX Design</li>
                 <li>Figma & Canva</li>
-                <li>Git & GitHub</li>
-                <li>VSCode & WebStorm</li>
-                <li>Trello</li>
               </ul>
             </SkillCard>
 
@@ -79,9 +73,9 @@ function About() {
               <ul>
                 <li>Agile (Scrum)</li>
                 <li>Communication</li>
-                <li>Problem Solving</li>
                 <li>Collaboration</li>
                 <li>Time Management</li>
+                <li>Problem Solving</li>
               </ul>
             </SkillCard>
           </SkillsCards>

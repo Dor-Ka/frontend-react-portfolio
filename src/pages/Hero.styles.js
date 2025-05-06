@@ -41,9 +41,10 @@ export const HeroContainer = styled.section`
 `;
 
 export const LogoImage = styled.img`
+  margin: 1rem;
   border-radius: 50%;
-  width: 180px;
-  height: 180px;
+  max-width: 180px;
+  max-height: 180px;
   object-fit: cover;
 
   @media (max-width: 680px) {
@@ -63,9 +64,10 @@ export const LogoImage = styled.img`
 `;
 
 export const HeroImage = styled.img`
+  margin: 1rem;
   border-radius: 50%;
-  width: 180px;
-  height: 180px;
+  max-width: 180px;
+  max-height: 180px;
   object-fit: cover;
 
   @media (max-width: 680px) {

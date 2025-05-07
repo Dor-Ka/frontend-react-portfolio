@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { usePageMeta } from "../../hooks/usePageMeta";
+import { ProjectsWrapper, ProjectsGrid, ProjectCard, ProjectLink } from "./Projects.styles";
+import { TitleWrapper, Title } from "../../components/shared/Title.styles"
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [repos, setRepos] = useState([]);
 
   usePageMeta(
     "Projects | Dorota Karpinska Portfolio",
@@ -11,41 +12,38 @@ function Projects() {
   );
 
   useEffect(() => {
-    async function fetchProjects() {
+    async function fetchRepos() {
       try {
         const response = await fetch("https://api.github.com/users/Dor-Ka/repos");
         const data = await response.json();
-        const filteredProjects = data.filter(repo => repo.name.startsWith("frontend-"));
-        setProjects(filteredProjects);
+        const filtered = data.filter((repo) => repo.name.startsWith("frontend-"));
+        setRepos(filtered);
       } catch (error) {
-        console.error("Failed to fetch projects:", error);
-      } finally {
-        setLoading(false);
+        console.error("Error fetching repositories:", error);
       }
     }
 
-    fetchProjects();
+    fetchRepos();
   }, []);
 
-  if (loading) {
-    return <p>Loading projects...</p>;
-  }
-
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>Here are some of my projects available on GitHub:</p>
-
-      <ul>
-        {projects.map((project) => (
-          <li key={project.id}>
-            <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-              {project.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <TitleWrapper>
+        <Title>My Projects</Title>
+      </TitleWrapper>
+      <ProjectsWrapper>
+        <ProjectsGrid>
+          {repos.map((repo) => (
+            <ProjectCard key={repo.id}>
+              <h2>{repo.name.replace(/frontend-(vanilla-js|react)-/, "").replace(/-/g, " ")}</h2>
+              <ProjectLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </ProjectLink>
+            </ProjectCard>
+          ))}
+        </ProjectsGrid>
+      </ProjectsWrapper>
+    </>
   );
 }
 

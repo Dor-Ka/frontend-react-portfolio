@@ -3,7 +3,7 @@ import { SocialIcons } from "../../components/shared/Social/SocialIcons";
 import logoImage from "../../assets/logo.png"
 
 import { ContactWrapper, CTA, InfoText, EmailButton } from "./Contact.styles";
-import { TitleWrapper, TitleH1 } from "../../components/shared/Title.styles";
+import { TitleWrapper, Title } from "../../components/shared/Title.styles";
 import { HeroContainer, LogoImage } from "../../components/shared/Hero.styles";
 
 
@@ -16,7 +16,7 @@ function Contact() {
   return (
     <>
       <TitleWrapper>
-        <TitleH1>Contact Me</TitleH1>
+        <Title>Contact Me</Title>
       </TitleWrapper>
       <HeroContainer>
         <LogoImage src={logoImage} alt="Logo Dorota Karpinska" />

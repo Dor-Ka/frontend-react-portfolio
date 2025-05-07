@@ -1,6 +1,6 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
 
-import { TitleH2 } from "../../components/shared/Title.styles";
+import { Subtitle } from "../../components/shared/Title.styles";
 
 import profileImage from '../../assets/profile.jpeg';
 
@@ -32,7 +32,7 @@ function About() {
           <li>Continuously improving through hands-on projects.</li>
           <li>Striving for a balance between design aesthetics and performance.</li>
         </AboutList>
-        <TitleH2>My Skills</TitleH2>
+        <Subtitle>My Skills</Subtitle>
         <SkillsSection>
           <SkillsCards>
             <SkillCard>

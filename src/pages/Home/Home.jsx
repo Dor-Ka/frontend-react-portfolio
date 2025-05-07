@@ -19,7 +19,7 @@ import {
   HeroContent,
   HeroTechnologies,
   TechnologyBadge,
-} from '../Hero.styles'
+} from '../../components/shared/Hero.styles'
 
 import { HomeSubtitle, HomeLinkRow, HomeStyledLink} from './Home.styles';
 

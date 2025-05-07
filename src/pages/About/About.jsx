@@ -1,11 +1,10 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
 
-import { TitleH2 } from "../Title";
+import { TitleH2 } from "../../components/shared/Title.styles";
 
 import profileImage from '../../assets/profile.jpeg';
-import logoImage from "../../assets/logo.png";
 
-import { HeroContainer, HeroImage, HeroWrapper, HeroName, HeroSubtitle} from '../Hero.styles';
+import { HeroContainer, HeroImage, HeroWrapper, HeroName, HeroSubtitle} from '../../components/shared/Hero.styles';
 
 import { AboutSection, AboutList, SkillsSection, SkillsCards, SkillCard} from './About.styles';
 

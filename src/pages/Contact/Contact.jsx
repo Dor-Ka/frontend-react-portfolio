@@ -1,7 +1,7 @@
 import { usePageMeta } from "../../hooks/usePageMeta";
 
 import { ContactWrapper, CTA, SocialLinks, SocialLink } from "./Contact.styles";
-import { TitleWrapper, TitleH1 } from "../Title";
+import { TitleWrapper, TitleH1 } from "../../components/shared/Title.styles";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 

@@ -15,9 +15,10 @@ function Projects() {
       try {
         const response = await fetch("https://api.github.com/users/Dor-Ka/repos");
         const data = await response.json();
-        setProjects(data);
+        const filteredProjects = data.filter(repo => repo.name.startsWith("frontend-"));
+        setProjects(filteredProjects);
       } catch (error) {
-        console.error("Error fetching projects:", error);
+        console.error("Failed to fetch projects:", error);
       } finally {
         setLoading(false);
       }

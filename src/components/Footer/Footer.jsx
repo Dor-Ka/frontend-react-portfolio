@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { FooterContainer, SocialLinks, SocialLink, CopyRight } from "./Footer.styles";
+import { FooterContainer, CopyRight } from "./Footer.styles";
+import { SocialLinks, SocialLink } from "../shared/SocialLinks.styles";
 
 function Footer() {
     return (

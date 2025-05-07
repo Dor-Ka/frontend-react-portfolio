@@ -89,7 +89,7 @@ export const SkillsCards = styled.div`
 `;
 
 export const SkillCard = styled.div`
-  background-color: ${({ theme }) => theme.background};
+  background:  ${({ theme }) => theme.navBg};
   border: 1px solid ${({ theme }) => theme.secondary};
   font-size: 1rem;
   padding: 1rem;

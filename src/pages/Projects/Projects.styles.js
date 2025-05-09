@@ -42,12 +42,16 @@ export const ProjectCard = styled.div`
 `;
 
 export const ProjectLink = styled.a`
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.text};
   font-weight: bold;
+  border-radius: 0.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: background 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.footerHover};
+    background: ${({ theme }) => theme.background};
   }
 `;

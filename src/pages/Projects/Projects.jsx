@@ -36,7 +36,7 @@ function Projects() {
           {repos.map((repo) => (
             <ProjectCard key={repo.id}>
               <h2>{repo.name.replace(/frontend-(vanilla-js|react|youcode)-/, "").replace(/-/g, " ")}</h2>
-              <p>{repo.description || "No description available."}</p> {/* dodane */}
+              <p>{repo.description || "No description available."}</p>
               <ProjectLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 View on GitHub
               </ProjectLink>

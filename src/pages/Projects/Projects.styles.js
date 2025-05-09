@@ -14,6 +14,8 @@ export const ProjectsGrid = styled.div`
 `;
 
 export const ProjectCard = styled.div`
+  display: flex;
+  flex-direction: column;
   background:  ${({ theme }) => theme.navBg};
   padding: 1.5rem;
   border-radius: 1rem;
@@ -36,22 +38,22 @@ export const ProjectCard = styled.div`
   font-size: 1rem;
   color: ${({ theme }) => theme.textLight};
   margin-bottom: 1rem;
-  min-height: 48px;
   }
 
 `;
 
 export const ProjectLink = styled.a`
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.text};
   font-weight: bold;
-  border-radius: 0.5rem;
   text-decoration: none;
-  transition: background 0.3s;
+  margin-top: auto; 
+  padding: 0.75rem 1rem;
+  border: 2px solid ${({ theme }) => theme.primary};
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.3s;
 
   &:hover {
-    background: ${({ theme }) => theme.background};
+    background: ${({ theme }) => theme.primary};
   }
 `;

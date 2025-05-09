@@ -90,7 +90,6 @@ export const SkillsCards = styled.div`
 
 export const SkillCard = styled.div`
   background:  ${({ theme }) => theme.navBg};
-  border: 1px solid ${({ theme }) => theme.secondary};
   font-size: 1rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -98,8 +97,7 @@ export const SkillCard = styled.div`
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px ${({ theme }) => theme.primary};
+    transform: scale(1.03);
   }
 
   h3 {

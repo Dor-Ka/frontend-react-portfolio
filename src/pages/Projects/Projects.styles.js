@@ -21,8 +21,7 @@ export const ProjectCard = styled.div`
   transition: transform 0.3s;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px ${({ theme }) => theme.primary};
+    transform: scale(1.03);
   }
   }
 

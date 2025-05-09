@@ -31,6 +31,14 @@ export const ProjectCard = styled.div`
     color: ${({ theme }) => theme.primary};
     margin-bottom: 1rem;
   }
+
+  p {
+  font-size: 1rem;
+  color: ${({ theme }) => theme.textLight};
+  margin-bottom: 1rem;
+  min-height: 48px;
+  }
+
 `;
 
 export const ProjectLink = styled.a`

@@ -16,15 +16,15 @@ export const ProjectsGrid = styled.div`
 export const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
-  background:  ${({ theme }) => theme.navBg};
+  background: ${({ theme }) => theme.navBg};
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-
+  cursor: pointer; /* Kursor wskazujący, że cała karta jest klikana */
+  
   &:hover {
     transform: scale(1.03);
-  }
   }
 
   h2 {
@@ -35,18 +35,17 @@ export const ProjectCard = styled.div`
   }
 
   p {
-  font-size: 1rem;
-  color: ${({ theme }) => theme.textLight};
-  margin-bottom: 1rem;
+    font-size: 1rem;
+    color: ${({ theme }) => theme.textLight};
+    margin-bottom: 1rem;
   }
-
 `;
 
 export const ProjectLink = styled.a`
   color: ${({ theme }) => theme.text};
   font-weight: bold;
   text-decoration: none;
-  margin-top: auto; 
+  margin-top: auto;
   padding: 0.75rem 1rem;
   border: 2px solid ${({ theme }) => theme.primary};
   border-radius: 0.5rem;

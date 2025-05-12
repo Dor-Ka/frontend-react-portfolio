@@ -46,9 +46,8 @@ function Projects() {
         <ProjectsGrid>
           {repos.map((repo) => {
             const { tech, origin } = detectProjectMeta(repo.name);
-
             return (
-              <ProjectCard key={repo.id}>
+              <ProjectCard key={repo.id} onClick={() => window.open(repo.html_url, "_blank")}>
                 <h2>{formatProjectName(repo.name)}</h2>
                 <BadgesWrapper>
                   <TechBadge $type={tech}>{tech}</TechBadge>

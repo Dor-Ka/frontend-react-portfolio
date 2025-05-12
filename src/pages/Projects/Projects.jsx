@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useProjects } from "../../hooks/useProjects";
+import { formatProjectName } from "../../utils/formatProjectName";
 import { usePageMeta } from "../../hooks/usePageMeta";
 import {
   ProjectsWrapper,
@@ -14,62 +15,12 @@ import {
 import { TitleWrapper, Title } from "../../components/shared/Title.styles";
 
 function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const { repos, setActiveFilter, activeFilter, detectProjectMeta } = useProjects();
 
   usePageMeta(
     "Projects | Dorota Karpinska Portfolio",
     "Discover projects developed by Dorota Karpinska, showcasing frontend skills and creativity."
   );
-
-  useEffect(() => {
-    async function fetchRepos() {
-      try {
-        const response = await fetch("https://api.github.com/users/Dor-Ka/repos");
-        const data = await response.json();
-        const filtered = data.filter((repo) => repo.name.startsWith("frontend-"));
-        setRepos(filtered);
-      } catch (error) {
-        console.error("Error fetching repositories:", error);
-      }
-    }
-
-    fetchRepos();
-  }, []);
-
-  function formatProjectName(name) {
-    return name
-      .replace(/(frontend-|youcode-|youcode-react-|react-|vanilla-js-)/gi, "")
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (char) => char.toUpperCase());
-  }
-
-  function detectProjectMeta(name) {
-    let tech = "Vanilla JS";
-    let origin = "Personal";
-
-    const lowerName = name.toLowerCase();
-
-    if (lowerName.includes("react")) {
-      tech = "React";
-    }
-
-    if (lowerName.includes("youcode")) {
-      origin = "YouCode";
-    }
-
-    return { tech, origin };
-  }
-
-  function filteredRepos() {
-    if (activeFilter === "All") {
-      return repos;
-    }
-    return repos.filter((repo) => {
-      const { tech } = detectProjectMeta(repo.name);
-      return tech === activeFilter;
-    });
-  }
 
   const filters = ["All", "React", "Vanilla JS"];
 
@@ -93,7 +44,7 @@ function Projects() {
 
       <ProjectsWrapper>
         <ProjectsGrid>
-          {filteredRepos().map((repo) => {
+          {repos.map((repo) => {
             const { tech, origin } = detectProjectMeta(repo.name);
 
             return (

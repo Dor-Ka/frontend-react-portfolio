@@ -57,3 +57,30 @@ export const ProjectLink = styled.a`
     background: ${({ theme }) => theme.primary};
   }
 `;
+
+export const BadgesWrapper = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+`;
+
+export const TechBadge = styled.span`
+  background-color: ${({ $type, theme }) => theme.badgeBg.tech[$type] || theme.badgeBg.tech.Other};
+  color: ${({ theme }) => theme.badgeText.tech};
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+`;
+
+export const OriginBadge = styled.span`
+  background-color: ${({ $origin, theme }) => theme.badgeBg.origin[$origin] || theme.badgeBg.origin.Personal};
+  color: ${({ theme }) => theme.badgeText.origin};
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+`;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { usePageMeta } from "../../hooks/usePageMeta";
-import { ProjectsWrapper, ProjectsGrid, ProjectCard, ProjectLink } from "./Projects.styles";
-import { TitleWrapper, Title } from "../../components/shared/Title.styles"
+import { ProjectsWrapper, ProjectsGrid, ProjectCard, ProjectLink, BadgesWrapper, TechBadge, OriginBadge } from "./Projects.styles";
+import { TitleWrapper, Title } from "../../components/shared/Title.styles";
 
 function Projects() {
   const [repos, setRepos] = useState([]);
@@ -32,7 +32,23 @@ function Projects() {
       .replace(/-/g, " ")
       .replace(/\b\w/g, (char) => char.toUpperCase());
   }
+
+  function detectProjectMeta(name) {
+    let tech = "Vanilla JS";
+    let origin = "Personal";
+
+    const lowerName = name.toLowerCase();
+
+    if (lowerName.includes("react")) {
+      tech = "React";
+    }
   
+    if (lowerName.includes("youcode")) {
+      origin = "YouCode";
+    }
+  
+    return { tech, origin };
+  }
 
   return (
     <>
@@ -41,15 +57,23 @@ function Projects() {
       </TitleWrapper>
       <ProjectsWrapper>
         <ProjectsGrid>
-          {repos.map((repo) => (
-            <ProjectCard key={repo.id}>
-              <h2>{formatProjectName(repo.name)}</h2>
-              <p>{repo.description || "No description available."}</p>
-              <ProjectLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                View on GitHub
-              </ProjectLink>
-            </ProjectCard>
-          ))}
+          {repos.map((repo) => {
+            const { tech, origin } = detectProjectMeta(repo.name);
+
+            return (
+              <ProjectCard key={repo.id}>
+                <h2>{formatProjectName(repo.name)}</h2>
+                <BadgesWrapper>
+                  <TechBadge $type={tech}>{tech}</TechBadge>
+                  <OriginBadge $origin={origin}>{origin}</OriginBadge>
+                </BadgesWrapper>
+                <p>{repo.description || "No description available."}</p>
+                <ProjectLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                  View on GitHub
+                </ProjectLink>
+              </ProjectCard>
+            );
+          })}
         </ProjectsGrid>
       </ProjectsWrapper>
     </>

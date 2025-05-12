@@ -12,6 +12,21 @@ export const lightTheme = {
     toggleBackground: '#ccc',
     toggleHover: '#bbb',
     lightbulbOn: '#333',
+    badgeBg: {
+      tech: {
+        React: "#61dafb",
+        "Vanilla JS": "#f7df1e",
+        Other: "#ccc",
+      },
+      origin: {
+        YouCode: "#7c3aed",
+        Personal: "#10b981",
+      },
+    },
+    badgeText: {
+      tech: "#333",
+      origin:"#eaeaea",
+    },
   };
   
   export const darkTheme = {
@@ -28,5 +43,20 @@ export const lightTheme = {
     toggleBackground: '#555',
     toggleHover: '#666',
     lightbulbOff: '#e38327',
+    badgeBg: {
+      tech: {
+        React: "#61dafb",
+        "Vanilla JS": "#f7df1e",
+        Other: "#ccc",
+      },
+      origin: {
+        YouCode: "#7c3aed",
+        Personal: "#10b981",
+      },
+    },
+    badgeText: {
+      tech: "#333",
+      origin:"#eaeaea",
+    },
   };
   

@@ -26,6 +26,14 @@ function Projects() {
     fetchRepos();
   }, []);
 
+  function formatProjectName(name) {
+    return name
+      .replace(/(frontend-|youcode-|youcode-react-|react-|vanilla-js-)/gi, "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+  
+
   return (
     <>
       <TitleWrapper>
@@ -35,13 +43,12 @@ function Projects() {
         <ProjectsGrid>
           {repos.map((repo) => (
             <ProjectCard key={repo.id}>
-              <h2>{repo.name.replace(/frontend-(vanilla-js|react|youcode)-/, "").replace(/-/g, " ")}</h2>
+              <h2>{formatProjectName(repo.name)}</h2>
               <p>{repo.description || "No description available."}</p>
               <ProjectLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 View on GitHub
               </ProjectLink>
             </ProjectCard>
-
           ))}
         </ProjectsGrid>
       </ProjectsWrapper>

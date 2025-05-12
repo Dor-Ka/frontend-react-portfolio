@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
 import { usePageMeta } from "../../hooks/usePageMeta";
-import { ProjectsWrapper, ProjectsGrid, ProjectCard, ProjectLink, BadgesWrapper, TechBadge, OriginBadge } from "./Projects.styles";
+import {
+  ProjectsWrapper,
+  ProjectsGrid,
+  ProjectCard,
+  ProjectLink,
+  BadgesWrapper,
+  TechBadge,
+  OriginBadge,
+  FiltersWrapper,
+  FilterButton
+} from "./Projects.styles";
 import { TitleWrapper, Title } from "../../components/shared/Title.styles";
 
 function Projects() {
   const [repos, setRepos] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   usePageMeta(
     "Projects | Dorota Karpinska Portfolio",
@@ -42,22 +53,47 @@ function Projects() {
     if (lowerName.includes("react")) {
       tech = "React";
     }
-  
+
     if (lowerName.includes("youcode")) {
       origin = "YouCode";
     }
-  
+
     return { tech, origin };
   }
+
+  function filteredRepos() {
+    if (activeFilter === "All") {
+      return repos;
+    }
+    return repos.filter((repo) => {
+      const { tech } = detectProjectMeta(repo.name);
+      return tech === activeFilter;
+    });
+  }
+
+  const filters = ["All", "React", "Vanilla JS"];
 
   return (
     <>
       <TitleWrapper>
         <Title>My Projects</Title>
       </TitleWrapper>
+
+      <FiltersWrapper>
+        {filters.map((filter) => (
+          <FilterButton
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            $active={activeFilter === filter}
+          >
+            {filter}
+          </FilterButton>
+        ))}
+      </FiltersWrapper>
+
       <ProjectsWrapper>
         <ProjectsGrid>
-          {repos.map((repo) => {
+          {filteredRepos().map((repo) => {
             const { tech, origin } = detectProjectMeta(repo.name);
 
             return (

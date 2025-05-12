@@ -1,10 +1,10 @@
 export const lightTheme = {
     background: "#eaeaea",
     text: "#333",
-    primary: "#e38327",
-    secondary: "#333",
+    primary: "#38BDF8",
+    secondary: "#5E9CBD",
     navBg: "#ddd",
-    navText: "#e38327",
+    navText: "#38BDF8",
     navActive: "#444",
     footerBg: "#ddd",
     footerText: "#444",
@@ -19,7 +19,7 @@ export const lightTheme = {
       },
       origin: {
         YouCode: "#e39923",
-        Personal: "#16C58B",
+        Personal: "#A1E0FA",
       },
     },
     badgeText: "#333",
@@ -28,17 +28,17 @@ export const lightTheme = {
   export const darkTheme = {
     background: "#444",
     text: "#eaeaea",
-    primary: "#e38327",
-    secondary: "#222",
+    primary: "#38BDF8",
+    secondary: "#5E9CBD",
     navBg: "#333",
-    navText: "#e38327",
+    navText: "#38BDF8",
     navActive: "#eaeaea",
     footerBg: "#333",
     footerText: "#aaa",
     footerHover: "#eaeaea",
     toggleBackground: '#555',
     toggleHover: '#666',
-    lightbulbOff: '#e38327',
+    lightbulbOff: '#F7DF1F',
     badgeBg: {
       tech: {
         React: "#61dafb",
@@ -46,7 +46,7 @@ export const lightTheme = {
       },
       origin: {
         YouCode: "#e39923",
-        Personal: "#16C58B",
+        Personal: "#A1E0FA",
       },
     },
     badgeText: "#333",

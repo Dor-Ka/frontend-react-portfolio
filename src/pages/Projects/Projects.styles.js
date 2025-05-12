@@ -29,7 +29,7 @@ export const ProjectCard = styled.div`
 
   h2 {
     font-size: 1.5rem;
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.secondary};
     margin-bottom: 1rem;
     word-break: break-word;
   }

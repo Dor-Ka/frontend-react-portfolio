@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.h1`
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
   margin: 0;
   font-size: 1.5rem;
 `;
@@ -55,7 +55,7 @@ export const NavLinks = styled.ul`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
   font-size: 1.25rem;
   text-decoration: none;
   transition: color 0.3s ease;

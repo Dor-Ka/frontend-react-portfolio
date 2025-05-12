@@ -40,6 +40,13 @@ It showcases my projects, skills, and contact information, using **React Router*
 - 📑 Favicon and manifest configured for PWA basics
 - 🍔 Mobile menu with hamburger button 
 - 🛑 Mobile menu closes on overlay click and Escape key press
+- 📚 Fetch and display GitHub projects dynamically
+- 🎯 Project filtering by technology (React, Vanilla JS, etc.)
+- 🛜 Loading indicator when fetching projects
+- 🖱️ Clickable project cards linking to GitHub repositories
+- 🏷️ Technology and origin badges under project titles
+- 🧹 Automatic project name cleanup (remove prefixes)
+- 🔵 Improved ProjectCard hover and link styles
 
 ## 🛠️ Built With
 
@@ -51,24 +58,44 @@ It showcases my projects, skills, and contact information, using **React Router*
 ## 📦 Folder Structure
 
 src/
-├── components/      # Navbar, Footer, and other reusable components
+├── assets/                     # images: profile & logo
+│   ├── logo.png
+│   └── profile.png
+├── components/                 # Navbar, Footer, and other reusable components
 │   ├── Navbar/
 │   ├── Footer/
-├── hooks/            # Custom React hooks
-│   ├── usePageMeta.js
+│   └── shared/
+│       ├── Social/
+│          ├── SocialIcons.jsx
+│          └── SocialLinks.styles.js 
+│       ├── Hero.styles.js
+│       └── Title.styles.js 
+├── hooks/                      # Custom React hooks
 │   ├── useIsMobile.js
-│   ├── useThemeMode.js
-├── pages/           # Page components (Home, About, Projects, Contact)
-│   ├── Home/
+│   ├── usePageMeta.js
+│   ├── useProjects.js
+│   └── useThemeMode.js
+├── pages/                      # Page components (Home, About, Projects, Contact)
 │   ├── About/
-│   ├── Projects/
+│       ├── About.jsx
+│       └── About.styles.js 
 │   ├── Contact/
-├── styles/          # Global styles and theme setup
+│       ├── Contact.jsx
+│       └── Contact.styles.js 
+│   ├── Home/
+│       ├── Home.jsx
+│       └── Home.styles.js 
+│   ├── Projects/
+│       ├── Projects.jsx
+│       └── Projects.styles.js 
+├── styles/                     # Global styles and theme setup
+│   ├── AppStyles.js
 │   ├── GlobalStyles.js
-│   ├── styles.js
-│   ├── theme.js     # Theme configuration (light and dark mode)
-├── App.jsx          # Main app with routing setup
-├── index.js         # Entry point for the app
+│   └──  theme.js                # Theme configuration (light and dark mode)
+├── utils/  
+│   └──  formatProjectNames.js
+├── App.jsx                     # Main app with routing setup
+├── index.js                    # Entry point for the app
 └── README.md   
 
 ## 📸 Screenshots

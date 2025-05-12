@@ -10,12 +10,13 @@ import {
   TechBadge,
   OriginBadge,
   FiltersWrapper,
-  FilterButton
+  FilterButton,
+  Loading
 } from "./Projects.styles";
 import { TitleWrapper, Title } from "../../components/shared/Title.styles";
 
 function Projects() {
-  const { repos, setActiveFilter, activeFilter, detectProjectMeta } = useProjects();
+  const { repos, setActiveFilter, activeFilter, detectProjectMeta, isLoading } = useProjects(); // <--- tu dodajesz isLoading
 
   usePageMeta(
     "Projects | Dorota Karpinska Portfolio",
@@ -23,6 +24,17 @@ function Projects() {
   );
 
   const filters = ["All", "React", "Vanilla JS"];
+
+  if (isLoading) {
+    return (
+      <>
+        <TitleWrapper>
+          <Title>My Projects</Title>
+        </TitleWrapper>
+        <Loading>Loading projects...</Loading> 
+      </>
+    );
+  }
 
   return (
     <>

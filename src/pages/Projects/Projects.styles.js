@@ -100,3 +100,9 @@ export const FilterButton = styled.button`
   font-size: 1rem;
   transition: background-color 0.3s;
 `;
+
+export const Loading = styled.p`
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+`

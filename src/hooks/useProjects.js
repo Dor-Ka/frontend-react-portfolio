@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export function useProjects() {
   const [repos, setRepos] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     async function fetchRepos() {
@@ -13,6 +14,8 @@ export function useProjects() {
         setRepos(filtered);
       } catch (error) {
         console.error("Error fetching repositories:", error);
+      } finally {
+        setIsLoading(false); 
       }
     }
 
@@ -51,5 +54,6 @@ export function useProjects() {
     setActiveFilter,
     activeFilter,
     detectProjectMeta,
+    isLoading, 
   };
 }

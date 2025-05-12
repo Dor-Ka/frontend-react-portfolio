@@ -67,7 +67,7 @@ export const BadgesWrapper = styled.div`
 
 export const TechBadge = styled.span`
   background-color: ${({ $type, theme }) => theme.badgeBg.tech[$type] || theme.badgeBg.tech.Other};
-  color: ${({ theme }) => theme.badgeText.tech};
+  color: ${({ theme }) => theme.badgeText};
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -77,7 +77,7 @@ export const TechBadge = styled.span`
 
 export const OriginBadge = styled.span`
   background-color: ${({ $origin, theme }) => theme.badgeBg.origin[$origin] || theme.badgeBg.origin.Personal};
-  color: ${({ theme }) => theme.badgeText.origin};
+  color: ${({ theme }) => theme.badgeText};
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   font-size: 0.75rem;

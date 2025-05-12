@@ -16,18 +16,14 @@ export const lightTheme = {
       tech: {
         React: "#61dafb",
         "Vanilla JS": "#f7df1e",
-        Other: "#ccc",
       },
       origin: {
-        YouCode: "#7c3aed",
-        Personal: "#10b981",
+        YouCode: "#e39923",
+        Personal: "#16C58B",
       },
     },
-    badgeText: {
-      tech: "#333",
-      origin:"#eaeaea",
-    },
-  };
+    badgeText: "#333",
+  }
   
   export const darkTheme = {
     background: "#444",
@@ -47,16 +43,12 @@ export const lightTheme = {
       tech: {
         React: "#61dafb",
         "Vanilla JS": "#f7df1e",
-        Other: "#ccc",
       },
       origin: {
-        YouCode: "#7c3aed",
-        Personal: "#10b981",
+        YouCode: "#e39923",
+        Personal: "#16C58B",
       },
     },
-    badgeText: {
-      tech: "#333",
-      origin:"#eaeaea",
-    },
+    badgeText: "#333",
   };
   
